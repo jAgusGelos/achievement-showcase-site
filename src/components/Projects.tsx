@@ -14,34 +14,34 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
-    description: "Plataforma completa de comercio electrónico con carrito de compras, procesamiento de pagos y gestión de inventario. Incluye panel de administración y analytics en tiempo real.",
-    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&auto=format&fit=crop",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    title: "Task Management App",
-    description: "Aplicación de gestión de tareas con colaboración en tiempo real, notificaciones push y sincronización multi-dispositivo. Diseño intuitivo y productivo.",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&auto=format&fit=crop",
-    tags: ["TypeScript", "Firebase", "React", "Tailwind"],
-    liveUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    title: "Social Media Dashboard",
-    description: "Dashboard analítico para redes sociales con métricas en tiempo real, generación de reportes y programación de contenido. Integración con múltiples plataformas.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop",
-    tags: ["Next.js", "GraphQL", "MongoDB", "Redis"],
-    liveUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    title: "Portfolio CMS",
-    description: "Sistema de gestión de contenido personalizado para portfolios creativos. Editor visual drag-and-drop, optimización SEO y despliegue automático.",
+    title: "Sistema de Gestión Empresarial",
+    description: "Plataforma integral para gestión de recursos, inventario y procesos empresariales. Incluye dashboards personalizables, reportería avanzada y automatización de workflows.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
-    tags: ["React", "Supabase", "Vercel", "TailwindCSS"],
+    tags: ["React", "Node.js", "PostgreSQL", "Docker"],
+    liveUrl: "#",
+    githubUrl: "#"
+  },
+  {
+    title: "Plataforma de E-Learning",
+    description: "Solución completa de aprendizaje online con gestión de cursos, seguimiento de progreso, evaluaciones interactivas y certificaciones. Sistema de videoconferencia integrado.",
+    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&auto=format&fit=crop",
+    tags: ["Next.js", "TypeScript", "WebRTC", "MongoDB"],
+    liveUrl: "#",
+    githubUrl: "#"
+  },
+  {
+    title: "Sistema de Reservas",
+    description: "Aplicación de reservas multi-negocio con calendario inteligente, pagos integrados, notificaciones automáticas y gestión de recursos. Panel administrativo completo.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop",
+    tags: ["React", "NestJs", "Stripe", "Firebase"],
+    liveUrl: "#",
+    githubUrl: "#"
+  },
+  {
+    title: "Dashboard Analítico",
+    description: "Plataforma de visualización de datos en tiempo real con KPIs personalizables, reportes automatizados y predicciones basadas en ML. Integración con múltiples fuentes de datos.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+    tags: ["React", "Python", "TensorFlow", "PostgreSQL"],
     liveUrl: "#",
     githubUrl: "#"
   }
@@ -49,14 +49,17 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="py-24 relative bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
+            <span className="text-primary font-semibold">Prometeo Software</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Proyectos <span className="gradient-text">Destacados</span>
+            Proyectos <span className="gradient-text">Independientes</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Una selección de trabajos que demuestran mi experiencia en desarrollo full-stack
+            Como fundador de Prometeo Software, desarrollo soluciones personalizadas para empresas
           </p>
         </div>
 

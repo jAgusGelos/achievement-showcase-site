@@ -48,17 +48,19 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed">
-                Con varios años de experiencia en desarrollo web, me especializo en 
-                crear aplicaciones robustas y escalables que resuelven problemas reales.
+                Software Engineer con más de 4 años de experiencia especializado en React, Node.js y 
+                pipelines CI/CD. Fundador de <span className="text-primary font-semibold">Prometeo Software</span>, 
+                donde desarrollo soluciones personalizadas para empresas.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Mi enfoque combina las mejores prácticas de desarrollo con un diseño 
-                centrado en el usuario, asegurando productos finales de alta calidad que 
-                superan las expectativas.
+                Mi experiencia abarca desde startups en Boston hasta empresas consolidadas en San Francisco, 
+                trabajando como contractor full-stack. Experto en construir aplicaciones escalables, 
+                optimizar workflows y mentorar equipos para entregar soluciones de impacto.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Constantemente actualizado con las últimas tecnologías y tendencias, 
-                busco siempre la excelencia en cada proyecto que emprendo.
+                Combino sólidas habilidades técnicas con liderazgo, habiendo aumentado cobertura de tests 
+                en 40%, reducido tiempos de deploy en 50%, y acelerado desarrollo mediante bibliotecas de 
+                componentes reutilizables.
               </p>
             </div>
 

@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 
 const Hero = () => {
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToExperience = () => {
+    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -30,11 +30,11 @@ const Hero = () => {
 
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Button 
-              onClick={scrollToProjects}
+              onClick={scrollToExperience}
               size="lg"
               className="bg-primary hover:bg-primary/90 glow-effect transition-all"
             >
-              Ver Proyectos
+              Ver Experiencia
               <ArrowDown className="ml-2 h-4 w-4" />
             </Button>
             <Button 
