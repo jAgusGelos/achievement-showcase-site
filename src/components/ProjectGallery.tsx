@@ -29,11 +29,11 @@ const ProjectGallery = ({ isOpen, onClose, project }: ProjectGalleryProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-6xl w-full h-[90vh] p-0 bg-black/95">
-        <div className="relative w-full h-full">
+      <DialogContent className="max-w-6xl w-full h-[90vh] max-h-[90vh] p-0 bg-black/95 overflow-hidden">
+        <div className="relative w-full h-full max-h-full overflow-hidden">
           {/* Header */}
           <div className="absolute top-4 left-4 right-4 z-10 flex justify-between items-center">
-            <h3 className="text-white text-xl font-semibold">{project.title}</h3>
+            <h3 className="text-gray-600 text-xl font-semibold">{project.title}</h3>
             <button
               onClick={onClose}
               className="text-white hover:bg-white/20 p-2 rounded-md transition-colors"
@@ -43,7 +43,7 @@ const ProjectGallery = ({ isOpen, onClose, project }: ProjectGalleryProps) => {
           </div>
 
           {/* Main Image */}
-          <div className="relative w-full h-full flex items-center justify-center">
+          <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
             <img
               src={project.images[currentImageIndex]}
               alt={`${project.title} - Image ${currentImageIndex + 1}`}
@@ -58,7 +58,7 @@ const ProjectGallery = ({ isOpen, onClose, project }: ProjectGalleryProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={prevImage}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:bg-white/20"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-600 hover:bg-white/20"
               >
                 <ChevronLeft className="h-6 w-6" />
               </Button>
@@ -66,7 +66,7 @@ const ProjectGallery = ({ isOpen, onClose, project }: ProjectGalleryProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={nextImage}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:bg-white/20"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-600 hover:bg-white/20"
               >
                 <ChevronRight className="h-6 w-6" />
               </Button>

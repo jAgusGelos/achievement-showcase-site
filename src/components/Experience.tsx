@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Briefcase, Calendar, MapPin, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 interface ExperienceItem {
   title: string;
@@ -10,21 +12,59 @@ interface ExperienceItem {
   description: string;
   achievements: string[];
   tags: string[];
+  detailedDescription?: string;
+  projects?: Array<{
+    name: string;
+    description: string;
+    achievements: string[];
+  }>;
 }
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Fullstack React + NestJs Developer",
-    company: "Squaduplabs LLC",
-    location: "Boston, USA",
-    period: "Feb 2025 - Presente",
-    description: "Desarrollo full-stack en startup de alto crecimiento",
+    title: "Ingeniero de Software",
+    company: "Squadup Labs",
+    location: "Remoto",
+    period: "2025 - Presente",
+    description: "Desarrollador full-stack construyendo plataformas SaaS escalables con tecnologías modernas. Lideró el desarrollo de 3 productos principales sirviendo a empresas de múltiples industrias.",
     achievements: [
-      "MVP Delivery: Entrega de producto full-stack incluyendo integración con Bubble, flujos de onboarding y bots de Slack usando GAE",
-      "Code Quality: Creación de infraestructura de testing e integración end-to-end con GitHub Actions",
-      "Infrastructure as Code: Implementación de funcionalidades de envío de emails y colas usando Amazon CDK"
+      "Desarrolló arquitectura serverless escalable con 3 funciones Lambda especializadas procesando más de 10,000 escaneos mensuales de competidores",
+      "Implementó sistema automatizado de escaneo en cuadrícula reduciendo el tiempo de escaneo de 2 horas a 15 minutos por ubicación (mejora del 87.5%)",
+      "Optimizó consultas SQL complejas con CTEs y LATERAL JOINs, mejorando el rendimiento de reportes en 75% (de 8 segundos a 2 segundos)",
+      "Integró más de 8 servicios externos (Google Maps, Stripe, AWS Location, Slack, PostHog) con 99.9% de disponibilidad"
     ],
-    tags: ["React", "NestJs", "Bubble", "AWS CDK", "Slack API", "GAE"]
+    tags: ["NestJS", "React", "TypeScript", "PostgreSQL", "AWS Lambda", "AWS CDK", "Serverless", "TanStack Stack"],
+    detailedDescription: "Desarrollador full-stack construyendo plataformas SaaS escalables con tecnologías modernas. Lideró el desarrollo de 3 productos principales sirviendo a empresas de múltiples industrias.",
+    projects: [
+      {
+        name: "Local Business Protection - Plataforma de Monitoreo y Protección SEO Local",
+        description: "Sistema SaaS para monitoreo automatizado de competidores en Google Maps y protección de posicionamiento SEO local para negocios.",
+        achievements: [
+          "Desarrolló arquitectura serverless escalable con 3 funciones Lambda especializadas procesando más de 10,000 escaneos mensuales de competidores",
+          "Implementó sistema automatizado de escaneo en cuadrícula reduciendo el tiempo de escaneo de 2 horas a 15 minutos por ubicación (mejora del 87.5%)",
+          "Optimizó consultas SQL complejas con CTEs y LATERAL JOINs, mejorando el rendimiento de reportes en 75% (de 8 segundos a 2 segundos)",
+          "Integró más de 8 servicios externos (Google Maps, Stripe, AWS Location, Slack, PostHog) con 99.9% de disponibilidad"
+        ]
+      },
+      {
+        name: "Afterhour - Plataforma de Asistente de Voz con IA",
+        description: "Plataforma SaaS de asistentes de voz con IA para empresas (principalmente firmas legales) manejando llamadas entrantes 24/7 y calificación automática de prospectos.",
+        achievements: [
+          "Implementó sistema de asistente de voz con IA procesando y analizando llamadas en tiempo real, extrayendo información estructurada de clientes potenciales",
+          "Automatizó la calificación de prospectos con algoritmos de IA",
+          "Diseñó arquitectura multi-tenant escalable soportando múltiples organizaciones con control de acceso basado en roles"
+        ]
+      },
+      {
+        name: "Aptiqude - Plataforma SaaS de Evaluación de Candidatos mediante Tests de IQ",
+        description: "Sistema completo de evaluación de talentos permitiendo a las empresas evaluar candidatos mediante tests de IQ con análisis avanzado de rendimiento y gestión integral del proceso de reclutamiento.",
+        achievements: [
+          "Desarrolló arquitectura multi-tenant escalable con aislamiento de datos por organización, manejando múltiples empresas simultáneamente",
+          "Implementó arquitectura serverless en AWS Lambda con despliegue automatizado",
+          "Optimizó rendimiento con lazy loading, code splitting y caché con TanStack Query, mejorando tiempos de carga en 40%"
+        ]
+      }
+    ]
   },
   {
     title: "Fullstack React + Node Developer",
@@ -70,10 +110,43 @@ const experiences: ExperienceItem[] = [
 ];
 
 const Experience = () => {
+  const [expandedCards, setExpandedCards] = useState<number[]>([]);
+  const [showAllExpanded, setShowAllExpanded] = useState(false);
+
+  const toggleCard = (index: number) => {
+    setExpandedCards(prev =>
+      prev.includes(index)
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
+  const toggleShowAll = () => {
+    if (showAllExpanded) {
+      setExpandedCards([]);
+      setShowAllExpanded(false);
+    } else {
+      setExpandedCards(experiences.map((_, index) => index));
+      setShowAllExpanded(true);
+    }
+  };
+
+  const isExpanded = (index: number) => expandedCards.includes(index);
+
   return (
-    <section id="experience" className="py-8 relative bg-muted/30">
+    <section id="experience" className="py-8 relative bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 space-y-2">
+          <div className="flex justify-between items-center mb-4">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={toggleShowAll}
+              className="ml-4"
+            >
+              {showAllExpanded ? 'Ocultar todo' : 'Mostrar todo'}
+            </Button>
+          </div>
           <h2 className="text-2xl md:text-3xl font-bold">
             Experiencia <span className="gradient-text">Profesional</span>
           </h2>
@@ -85,60 +158,134 @@ const Experience = () => {
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-1/2 transform -translate-x-0.5 w-0.5 h-full bg-primary/20"></div>
-              
+
               <div className="space-y-8">
-                {experiences.map((exp, index) => (
+                {experiences.map((exp, index) => {
+                  // Extract year from period (e.g., "Feb 2025 - Presente" -> "2025")
+                  const yearMatch = exp.period.match(/\d{4}/);
+                  const year = yearMatch ? yearMatch[0] : '';
+
+                  return (
                   <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                    {/* Timeline dot */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-primary rounded-full border-2 border-background z-10"></div>
-                    
+                    {/* Timeline dot with year */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
+                      <div className="w-4 h-4 bg-primary rounded-full border-2 border-background"></div>
+                      <span className="mt-2 text-base md:text-lg font-bold text-primary bg-background px-3 py-1.5 rounded-md shadow-sm whitespace-nowrap">
+                        {year}
+                      </span>
+                    </div>
+
                     {/* Content */}
-                    <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                      <Card className="group bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-effect">
-                        <CardContent className="p-4">
-                          <div className="space-y-2">
-                            <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
-                              <Briefcase className="h-3 w-3" />
+                    <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                      <Card
+                        className="group bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-effect cursor-pointer hover:scale-105"
+                        onMouseEnter={() => !showAllExpanded && toggleCard(index)}
+                        onMouseLeave={() => !showAllExpanded && toggleCard(index)}
+                      >
+                        <CardContent className="p-6 transition-all duration-500">
+                          <div className="space-y-3">
+                            <div className="flex items-center gap-2 text-base font-semibold text-muted-foreground transition-all duration-300">
+                              <Briefcase className="h-5 w-5" />
                               {exp.company}
                             </div>
-                            <h3 className="font-semibold text-sm group-hover:text-primary transition-colors">
+                            <h3 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
                               {exp.title}
                             </h3>
-                            <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
+                            <div className="flex flex-wrap gap-2 text-sm text-muted-foreground transition-all duration-300">
                               <div className="flex items-center gap-1">
-                                <Calendar className="h-3 w-3" />
+                                <Calendar className="h-4 w-4" />
                                 <span>{exp.period}</span>
                               </div>
                               <div className="flex items-center gap-1">
-                                <MapPin className="h-3 w-3" />
+                                <MapPin className="h-4 w-4" />
                                 <span>{exp.location}</span>
                               </div>
                             </div>
-                            <p className="text-xs text-muted-foreground line-clamp-2">
-                              {exp.description}
-                            </p>
-                            <div className="flex flex-wrap gap-1">
-                              {exp.tags.slice(0, 3).map((tag, tagIndex) => (
-                                <Badge 
-                                  key={tagIndex}
-                                  variant="secondary"
-                                  className="bg-secondary hover:bg-primary transition-colors text-xs"
-                                >
-                                  {tag}
-                                </Badge>
-                              ))}
-                              {exp.tags.length > 3 && (
-                                <Badge variant="secondary" className="text-xs">
-                                  +{exp.tags.length - 3}
-                                </Badge>
-                              )}
+
+                            {/* Collapsed View */}
+                            <div className={`transition-all duration-500 overflow-hidden ${!isExpanded(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                              <p className="text-sm text-muted-foreground line-clamp-2">
+                                {exp.description}
+                              </p>
+                              <div className="flex flex-wrap gap-2 mt-3">
+                                {exp.tags.slice(0, 3).map((tag, tagIndex) => (
+                                  <Badge
+                                    key={tagIndex}
+                                    variant="secondary"
+                                    className="bg-secondary hover:bg-primary transition-colors text-sm"
+                                  >
+                                    {tag}
+                                  </Badge>
+                                ))}
+                                {exp.tags.length > 3 && (
+                                  <Badge variant="secondary" className="text-sm">
+                                    +{exp.tags.length - 3}
+                                  </Badge>
+                                )}
+                              </div>
+                            </div>
+
+                            {/* Expanded View */}
+                            <div className={`transition-all duration-500 overflow-hidden ${isExpanded(index) ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                              <div className="space-y-4 mt-4">
+                                <p className="text-sm text-muted-foreground">
+                                  {exp.description}
+                                </p>
+
+                                <div className="flex flex-wrap gap-2">
+                                  {exp.tags.map((tag, tagIndex) => (
+                                    <Badge
+                                      key={tagIndex}
+                                      variant="secondary"
+                                      className="bg-secondary hover:bg-primary transition-colors text-sm"
+                                    >
+                                      {tag}
+                                    </Badge>
+                                  ))}
+                                </div>
+
+                                {exp.projects && exp.projects.length > 0 && (
+                                  <div className="space-y-4 mt-4">
+                                    <h4 className="text-sm font-semibold text-primary">Proyectos:</h4>
+                                    {exp.projects.map((project, projectIndex) => (
+                                      <div key={projectIndex} className="bg-muted/50 p-4 rounded-md space-y-3 transition-all duration-300">
+                                        <h5 className="text-sm font-semibold">{project.name}</h5>
+                                        <p className="text-sm text-muted-foreground">{project.description}</p>
+                                        <ul className="space-y-2">
+                                          {project.achievements.map((achievement, achIndex) => (
+                                            <li key={achIndex} className="text-sm text-muted-foreground flex gap-2">
+                                              <span className="text-primary">•</span>
+                                              <span>{achievement}</span>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+
+                                {(!exp.projects || exp.projects.length === 0) && exp.achievements.length > 0 && (
+                                  <div className="space-y-3">
+                                    <h4 className="text-sm font-semibold text-primary">Logros:</h4>
+                                    <ul className="space-y-2">
+                                      {exp.achievements.map((achievement, achIndex) => (
+                                        <li key={achIndex} className="text-sm text-muted-foreground flex gap-2">
+                                          <span className="text-primary">•</span>
+                                          <span>{achievement}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )}
+                              </div>
                             </div>
                           </div>
                         </CardContent>
                       </Card>
                     </div>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -146,47 +293,108 @@ const Experience = () => {
           {/* Compact Grid for Mobile/Tablet */}
           <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-4">
             {experiences.map((exp, index) => (
-              <Card 
+              <Card
                 key={index}
-                className="group bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-effect"
+                className="group bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-effect cursor-pointer hover:scale-105"
+                onMouseEnter={() => !showAllExpanded && toggleCard(index)}
+                onMouseLeave={() => !showAllExpanded && toggleCard(index)}
               >
-                <CardContent className="p-4">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-xs font-semibold text-muted-foreground">
-                      <Briefcase className="h-3 w-3" />
+                <CardContent className="p-6 transition-all duration-500">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 text-base font-semibold text-muted-foreground transition-all duration-300">
+                      <Briefcase className="h-5 w-5" />
                       {exp.company}
                     </div>
-                    <h3 className="font-semibold text-sm group-hover:text-primary transition-colors line-clamp-1">
+                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
                       {exp.title}
                     </h3>
-                    <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
+                    <div className="flex flex-wrap gap-2 text-sm text-muted-foreground transition-all duration-300">
                       <div className="flex items-center gap-1">
-                        <Calendar className="h-3 w-3" />
+                        <Calendar className="h-4 w-4" />
                         <span>{exp.period}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <MapPin className="h-3 w-3" />
+                        <MapPin className="h-4 w-4" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
-                    <p className="text-xs text-muted-foreground line-clamp-2">
-                      {exp.description}
-                    </p>
-                    <div className="flex flex-wrap gap-1">
-                      {exp.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <Badge 
-                          key={tagIndex}
-                          variant="secondary"
-                          className="bg-secondary hover:bg-primary transition-colors text-xs"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
-                      {exp.tags.length > 3 && (
-                        <Badge variant="secondary" className="text-xs">
-                          +{exp.tags.length - 3}
-                        </Badge>
-                      )}
+
+                    {/* Collapsed View */}
+                    <div className={`transition-all duration-500 overflow-hidden ${!isExpanded(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        {exp.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {exp.tags.slice(0, 3).map((tag, tagIndex) => (
+                          <Badge
+                            key={tagIndex}
+                            variant="secondary"
+                            className="bg-secondary hover:bg-primary transition-colors text-sm"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                        {exp.tags.length > 3 && (
+                          <Badge variant="secondary" className="text-sm">
+                            +{exp.tags.length - 3}
+                          </Badge>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Expanded View */}
+                    <div className={`transition-all duration-500 overflow-hidden ${isExpanded(index) ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className="space-y-4 mt-4">
+                        <p className="text-sm text-muted-foreground">
+                          {exp.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2">
+                          {exp.tags.map((tag, tagIndex) => (
+                            <Badge
+                              key={tagIndex}
+                              variant="secondary"
+                              className="bg-secondary hover:bg-primary transition-colors text-sm"
+                            >
+                              {tag}
+                            </Badge>
+                          ))}
+                        </div>
+
+                        {exp.projects && exp.projects.length > 0 && (
+                          <div className="space-y-4 mt-4">
+                            <h4 className="text-sm font-semibold text-primary">Proyectos:</h4>
+                            {exp.projects.map((project, projectIndex) => (
+                              <div key={projectIndex} className="bg-muted/50 p-4 rounded-md space-y-3 transition-all duration-300">
+                                <h5 className="text-sm font-semibold">{project.name}</h5>
+                                <p className="text-sm text-muted-foreground">{project.description}</p>
+                                <ul className="space-y-2">
+                                  {project.achievements.map((achievement, achIndex) => (
+                                    <li key={achIndex} className="text-sm text-muted-foreground flex gap-2">
+                                      <span className="text-primary">•</span>
+                                      <span>{achievement}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {(!exp.projects || exp.projects.length === 0) && exp.achievements.length > 0 && (
+                          <div className="space-y-3">
+                            <h4 className="text-sm font-semibold text-primary">Logros:</h4>
+                            <ul className="space-y-2">
+                              {exp.achievements.map((achievement, achIndex) => (
+                                <li key={achIndex} className="text-sm text-muted-foreground flex gap-2">
+                                  <span className="text-primary">•</span>
+                                  <span>{achievement}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </CardContent>

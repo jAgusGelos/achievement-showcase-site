@@ -56,7 +56,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-8 relative bg-muted/30">
+    <section id="about" className="py-16 relative bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 space-y-2">
           <h2 className="text-2xl md:text-3xl font-bold">
@@ -68,18 +68,18 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skillCategories.map((category, index) => (
               <Card key={index} className="bg-card border-border hover:border-primary/50 transition-all duration-300">
-                <CardContent className="p-4">
-                  <div className="space-y-3">
+                <CardContent className="p-6">
+                  <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary">
-                      <category.icon className="h-4 w-4" />
-                      <h4 className="font-semibold text-sm">{category.title}</h4>
+                      <category.icon className="h-5 w-5" />
+                      <h4 className="font-semibold text-base">{category.title}</h4>
                     </div>
-                    <div className="flex flex-wrap gap-1">
+                    <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill, i) => (
-                        <Badge 
-                          key={i} 
-                          variant="secondary" 
-                          className="bg-secondary hover:bg-primary transition-colors text-xs"
+                        <Badge
+                          key={i}
+                          variant="secondary"
+                          className="bg-secondary hover:bg-primary transition-colors text-sm"
                         >
                           {skill}
                         </Badge>
@@ -94,26 +94,26 @@ const About = () => {
           {/* Additional Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <Card className="bg-card border-border">
-              <CardContent className="p-4 text-center">
+              <CardContent className="p-6 text-center">
                 <div className="space-y-2">
-                  <div className="text-2xl font-bold text-primary">4+</div>
-                  <div className="text-sm text-muted-foreground">Años de experiencia</div>
+                  <div className="text-3xl font-bold text-primary">4+</div>
+                  <div className="text-base text-muted-foreground">Años de experiencia</div>
                 </div>
               </CardContent>
             </Card>
             <Card className="bg-card border-border">
-              <CardContent className="p-4 text-center">
+              <CardContent className="p-6 text-center">
                 <div className="space-y-2">
-                  <div className="text-2xl font-bold text-primary">50+</div>
-                  <div className="text-sm text-muted-foreground">Proyectos completados</div>
+                  <div className="text-3xl font-bold text-primary">50+</div>
+                  <div className="text-base text-muted-foreground">Proyectos completados</div>
                 </div>
               </CardContent>
             </Card>
             <Card className="bg-card border-border">
-              <CardContent className="p-4 text-center">
+              <CardContent className="p-6 text-center">
                 <div className="space-y-2">
-                  <div className="text-2xl font-bold text-primary">15+</div>
-                  <div className="text-sm text-muted-foreground">Tecnologías dominadas</div>
+                  <div className="text-3xl font-bold text-primary">15+</div>
+                  <div className="text-base text-muted-foreground">Tecnologías dominadas</div>
                 </div>
               </CardContent>
             </Card>
