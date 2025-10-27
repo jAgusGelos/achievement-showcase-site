@@ -33,69 +33,61 @@ const expertise = [
 
 const About = () => {
   return (
-    <section className="py-24 relative bg-muted/30">
+    <section id="about" className="py-12 md:py-16 relative bg-muted/30">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-8 space-y-2">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            <span className="gradient-text">Skills</span> Técnicas
+          </h2>
+        </div>
+
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold">
-              Sobre <span className="gradient-text">Mí</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Desarrollador apasionado por crear soluciones tecnológicas que marcan la diferencia
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6">
-              <p className="text-lg leading-relaxed">
-                Software Engineer con más de 4 años de experiencia especializado en React, Node.js y 
-                pipelines CI/CD. Fundador de <span className="text-primary font-semibold">Prometeo Software</span>, 
-                donde desarrollo soluciones personalizadas para empresas.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Mi experiencia abarca desde startups en Boston hasta empresas consolidadas en San Francisco, 
-                trabajando como contractor full-stack. Experto en construir aplicaciones escalables, 
-                optimizar workflows y mentorar equipos para entregar soluciones de impacto.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Combino sólidas habilidades técnicas con liderazgo, habiendo aumentado cobertura de tests 
-                en 40%, reducido tiempos de deploy en 50%, y acelerado desarrollo mediante bibliotecas de 
-                componentes reutilizables.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold mb-6">Tecnologías & Skills</h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.map((skill, index) => (
-                  <Badge 
-                    key={index}
-                    variant="secondary"
-                    className="text-base px-4 py-2 bg-secondary hover:bg-primary transition-all hover:glow-effect"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {expertise.map((item, index) => (
-              <Card 
-                key={index}
-                className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:glow-effect group"
-              >
-                <CardContent className="p-6 space-y-4">
-                  <div className="p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary transition-colors">
-                    <item.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground" />
+          <Card className="bg-card border-border">
+            <CardContent className="pt-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-sm text-primary">Frontend</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["React", "Next.js", "TypeScript", "Tailwind"].map((skill, i) => (
+                      <Badge key={i} variant="secondary" className="bg-secondary hover:bg-primary transition-colors text-xs">
+                        {skill}
+                      </Badge>
+                    ))}
                   </div>
-                  <h3 className="text-xl font-bold">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-sm text-primary">Backend</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["Node.js", "NestJs", "PostgreSQL", "MongoDB"].map((skill, i) => (
+                      <Badge key={i} variant="secondary" className="bg-secondary hover:bg-primary transition-colors text-xs">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-sm text-primary">DevOps</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["Docker", "AWS", "GCloud", "CI/CD"].map((skill, i) => (
+                      <Badge key={i} variant="secondary" className="bg-secondary hover:bg-primary transition-colors text-xs">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-sm text-primary">Testing</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["Jest", "Testing Library", "E2E"].map((skill, i) => (
+                      <Badge key={i} variant="secondary" className="bg-secondary hover:bg-primary transition-colors text-xs">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

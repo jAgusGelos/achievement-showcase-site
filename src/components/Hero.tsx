@@ -1,82 +1,51 @@
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
-  const scrollToExperience = () => {
-    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient glow */}
-      <div className="absolute inset-0 bg-[var(--gradient-glow)]" />
+    <section className="relative py-12 md:py-16 overflow-hidden border-b border-border">
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              Hola, soy <span className="gradient-text">Agustín Gelos</span>
+        <div className="max-w-6xl mx-auto text-center space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="space-y-3">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+              <span className="gradient-text">Agustín Gelos</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground">
-              Desarrollador Full Stack & Creador de Experiencias Digitales
+            <p className="text-xl md:text-2xl text-muted-foreground font-light">
+              Fullstack Developer & Tech Lead
             </p>
           </div>
 
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Transformo ideas en soluciones digitales innovadoras. 
-            Especializado en desarrollo web moderno, con pasión por crear 
-            productos que generen impacto real.
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+            +4 años desarrollando soluciones full-stack para empresas internacionales
           </p>
 
-          <div className="flex items-center justify-center gap-4 flex-wrap">
-            <Button 
-              onClick={scrollToExperience}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 glow-effect transition-all"
-            >
-              Ver Experiencia
-              <ArrowDown className="ml-2 h-4 w-4" />
-            </Button>
-            <Button 
-              size="lg"
-              variant="secondary"
-              className="bg-secondary hover:bg-secondary/80"
-            >
-              Contactar
-              <Mail className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-
-          <div className="flex items-center justify-center gap-4 pt-8">
+          <div className="flex gap-4 justify-center pt-4">
             <a 
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary hover:bg-primary transition-all hover:glow-effect"
+              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
             >
-              <Github className="h-5 w-5" />
+              <Github className="h-6 w-6" />
             </a>
             <a 
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary hover:bg-primary transition-all hover:glow-effect"
+              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
             >
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-6 w-6" />
             </a>
             <a 
-              href="mailto:contact@example.com"
-              className="p-3 rounded-full bg-secondary hover:bg-primary transition-all hover:glow-effect"
+              href="#contact"
+              className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
             >
-              <Mail className="h-5 w-5" />
+              <Mail className="h-6 w-6" />
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Floating animation indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="h-6 w-6 text-primary" />
       </div>
     </section>
   );
