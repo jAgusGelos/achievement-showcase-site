@@ -32,62 +32,92 @@ const expertise = [
 ];
 
 const About = () => {
+  const skillCategories = [
+    {
+      title: "Frontend",
+      skills: ["React", "Angular", "Next.js", "TypeScript", "Tailwind" ],
+      icon: Code2
+    },
+    {
+      title: "Backend", 
+      skills: ["Node.js", "NestJs", "PostgreSQL", "MongoDB", "Redis", "GraphQL"],
+      icon: Database
+    },
+    {
+      title: "DevOps",
+      skills: ["Docker", "AWS", "GCloud", "CI/CD", "GCP"],
+      icon: Globe
+    },
+    {
+      title: "Testing",
+      skills: ["Jest", "Testing Library", "E2E", "Cypress"],
+      icon: Smartphone
+    }
+  ];
+
   return (
-    <section id="about" className="py-12 md:py-16 relative bg-muted/30">
+    <section id="about" className="py-8 relative bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8 space-y-2">
-          <h2 className="text-3xl md:text-4xl font-bold">
+        <div className="text-center mb-6 space-y-2">
+          <h2 className="text-2xl md:text-3xl font-bold">
             <span className="gradient-text">Skills</span> Técnicas
           </h2>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <Card className="bg-card border-border">
-            <CardContent className="pt-6">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-sm text-primary">Frontend</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {["React", "Next.js", "TypeScript", "Tailwind"].map((skill, i) => (
-                      <Badge key={i} variant="secondary" className="bg-secondary hover:bg-primary transition-colors text-xs">
-                        {skill}
-                      </Badge>
-                    ))}
+        <div className="w-full px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {skillCategories.map((category, index) => (
+              <Card key={index} className="bg-card border-border hover:border-primary/50 transition-all duration-300">
+                <CardContent className="p-4">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 text-primary">
+                      <category.icon className="h-4 w-4" />
+                      <h4 className="font-semibold text-sm">{category.title}</h4>
+                    </div>
+                    <div className="flex flex-wrap gap-1">
+                      {category.skills.map((skill, i) => (
+                        <Badge 
+                          key={i} 
+                          variant="secondary" 
+                          className="bg-secondary hover:bg-primary transition-colors text-xs"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Additional Info Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <Card className="bg-card border-border">
+              <CardContent className="p-4 text-center">
+                <div className="space-y-2">
+                  <div className="text-2xl font-bold text-primary">4+</div>
+                  <div className="text-sm text-muted-foreground">Años de experiencia</div>
                 </div>
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-sm text-primary">Backend</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {["Node.js", "NestJs", "PostgreSQL", "MongoDB"].map((skill, i) => (
-                      <Badge key={i} variant="secondary" className="bg-secondary hover:bg-primary transition-colors text-xs">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
+              </CardContent>
+            </Card>
+            <Card className="bg-card border-border">
+              <CardContent className="p-4 text-center">
+                <div className="space-y-2">
+                  <div className="text-2xl font-bold text-primary">50+</div>
+                  <div className="text-sm text-muted-foreground">Proyectos completados</div>
                 </div>
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-sm text-primary">DevOps</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {["Docker", "AWS", "GCloud", "CI/CD"].map((skill, i) => (
-                      <Badge key={i} variant="secondary" className="bg-secondary hover:bg-primary transition-colors text-xs">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
+              </CardContent>
+            </Card>
+            <Card className="bg-card border-border">
+              <CardContent className="p-4 text-center">
+                <div className="space-y-2">
+                  <div className="text-2xl font-bold text-primary">15+</div>
+                  <div className="text-sm text-muted-foreground">Tecnologías dominadas</div>
                 </div>
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-sm text-primary">Testing</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {["Jest", "Testing Library", "E2E"].map((skill, i) => (
-                      <Badge key={i} variant="secondary" className="bg-secondary hover:bg-primary transition-colors text-xs">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

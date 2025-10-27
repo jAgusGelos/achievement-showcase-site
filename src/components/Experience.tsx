@@ -71,71 +71,128 @@ const experiences: ExperienceItem[] = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-12 md:py-16 relative bg-muted/30">
+    <section id="experience" className="py-8 relative bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8 space-y-2">
-          <h2 className="text-3xl md:text-4xl font-bold">
+        <div className="text-center mb-6 space-y-2">
+          <h2 className="text-2xl md:text-3xl font-bold">
             Experiencia <span className="gradient-text">Profesional</span>
           </h2>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {experiences.map((exp, index) => (
-            <Card 
-              key={index}
-              className="group bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-effect"
-            >
-              <CardHeader className="pb-3">
-                <div className="space-y-2">
-                  <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                    {exp.title}
-                  </CardTitle>
-                  <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
-                    <Briefcase className="h-4 w-4" />
-                    {exp.company}
-                  </div>
-                  <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-3 w-3" />
-                      <span>{exp.period}</span>
+        <div className="max-w-7xl mx-auto">
+          {/* Timeline View for Desktop */}
+          <div className="hidden lg:block">
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-1/2 transform -translate-x-0.5 w-0.5 h-full bg-primary/20"></div>
+              
+              <div className="space-y-8">
+                {experiences.map((exp, index) => (
+                  <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                    {/* Timeline dot */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-primary rounded-full border-2 border-background z-10"></div>
+                    
+                    {/* Content */}
+                    <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                      <Card className="group bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-effect">
+                        <CardContent className="p-4">
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
+                              <Briefcase className="h-3 w-3" />
+                              {exp.company}
+                            </div>
+                            <h3 className="font-semibold text-sm group-hover:text-primary transition-colors">
+                              {exp.title}
+                            </h3>
+                            <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
+                              <div className="flex items-center gap-1">
+                                <Calendar className="h-3 w-3" />
+                                <span>{exp.period}</span>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <MapPin className="h-3 w-3" />
+                                <span>{exp.location}</span>
+                              </div>
+                            </div>
+                            <p className="text-xs text-muted-foreground line-clamp-2">
+                              {exp.description}
+                            </p>
+                            <div className="flex flex-wrap gap-1">
+                              {exp.tags.slice(0, 3).map((tag, tagIndex) => (
+                                <Badge 
+                                  key={tagIndex}
+                                  variant="secondary"
+                                  className="bg-secondary hover:bg-primary transition-colors text-xs"
+                                >
+                                  {tag}
+                                </Badge>
+                              ))}
+                              {exp.tags.length > 3 && (
+                                <Badge variant="secondary" className="text-xs">
+                                  +{exp.tags.length - 3}
+                                </Badge>
+                              )}
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <MapPin className="h-3 w-3" />
-                      <span>{exp.location}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Compact Grid for Mobile/Tablet */}
+          <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-4">
+            {experiences.map((exp, index) => (
+              <Card 
+                key={index}
+                className="group bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-effect"
+              >
+                <CardContent className="p-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-semibold text-muted-foreground">
+                      <Briefcase className="h-3 w-3" />
+                      {exp.company}
+                    </div>
+                    <h3 className="font-semibold text-sm group-hover:text-primary transition-colors line-clamp-1">
+                      {exp.title}
+                    </h3>
+                    <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        <span>{exp.period}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <MapPin className="h-3 w-3" />
+                        <span>{exp.location}</span>
+                      </div>
+                    </div>
+                    <p className="text-xs text-muted-foreground line-clamp-2">
+                      {exp.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1">
+                      {exp.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <Badge 
+                          key={tagIndex}
+                          variant="secondary"
+                          className="bg-secondary hover:bg-primary transition-colors text-xs"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                      {exp.tags.length > 3 && (
+                        <Badge variant="secondary" className="text-xs">
+                          +{exp.tags.length - 3}
+                        </Badge>
+                      )}
                     </div>
                   </div>
-                </div>
-              </CardHeader>
-
-              <CardContent className="space-y-3 pt-0">
-                <ul className="space-y-2">
-                  {exp.achievements.slice(0, 3).map((achievement, achIndex) => (
-                    <li key={achIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                      <span className="line-clamp-2">{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="flex flex-wrap gap-1.5 pt-2">
-                  {exp.tags.slice(0, 4).map((tag, tagIndex) => (
-                    <Badge 
-                      key={tagIndex}
-                      variant="secondary"
-                      className="bg-secondary hover:bg-primary transition-colors text-xs"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                  {exp.tags.length > 4 && (
-                    <Badge variant="secondary" className="text-xs">
-                      +{exp.tags.length - 4}
-                    </Badge>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
