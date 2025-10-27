@@ -134,7 +134,7 @@ const Experience = () => {
   const isExpanded = (index: number) => expandedCards.includes(index);
 
   return (
-    <section id="experience" className="py-8 relative bg-muted/50">
+    <section id="experience" className="py-8 relative pattern-gradient-grid">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 space-y-2">
           <div className="flex justify-between items-center mb-4">
