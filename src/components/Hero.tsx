@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const Hero = () => {
   const quickStats = [
     { label: "Años de experiencia", value: "4+" },
-    { label: "Proyectos completados", value: "50+" },
+    { label: "Proyectos completados", value: "20+" },
     { label: "Empresas internacionales", value: "3" },
     { label: "Tecnologías dominadas", value: "15+" }
   ];
@@ -29,9 +29,9 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden border-b border-border flex items-center">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
+    <section className="relative min-h-screen overflow-hidden border-b border-border flex items-center pattern-gradient-grid">
+      {/* Animated background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-primary/5" />
       
       <div className="container mx-auto px-4 relative z-10 py-6 w-full">
         <div className="max-w-7xl mx-auto">
@@ -147,11 +147,11 @@ const Hero = () => {
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 text-base">
                         <Mail className="h-5 w-5 text-muted-foreground" />
-                        <span className="text-muted-foreground">agustin.gelos@email.com</span>
+                        <span className="text-muted-foreground">juanagustingelos@gmail.com</span>
                       </div>
                       <div className="flex gap-4 pt-2">
                         <a
-                          href="https://github.com"
+                          href="https://github.com/jAgusGelos"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
@@ -159,7 +159,7 @@ const Hero = () => {
                           <Github className="h-7 w-7" />
                         </a>
                         <a
-                          href="https://linkedin.com"
+                          href="https://www.linkedin.com/in/juan-agustin-gelos/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
@@ -188,6 +188,9 @@ const Hero = () => {
                       </div>
                       <div className="text-sm text-muted-foreground">
                         <strong>DevOps:</strong> AWS, Docker, CI/CD
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        <strong>Testing:</strong> Cypress, Jest
                       </div>
                     </div>
                   </div>

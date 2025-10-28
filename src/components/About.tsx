@@ -104,7 +104,7 @@ const About = () => {
             <Card className="bg-card border-border">
               <CardContent className="p-6 text-center">
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-primary">50+</div>
+                  <div className="text-3xl font-bold text-primary">20+</div>
                   <div className="text-base text-muted-foreground">Proyectos completados</div>
                 </div>
               </CardContent>
