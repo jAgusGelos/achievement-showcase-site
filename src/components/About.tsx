@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Code2, Database, Globe, Smartphone } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const skills = [
   "React", "TypeScript", "Node.js", "Next.js",
@@ -32,24 +33,25 @@ const expertise = [
 ];
 
 const About = () => {
+  const { t } = useTranslation();
   const skillCategories = [
     {
-      title: "Frontend",
+      title: t("about.frontend"),
       skills: ["React", "Angular", "Next.js", "TypeScript", "Tailwind" ],
       icon: Code2
     },
     {
-      title: "Backend", 
+      title: t("about.backend"),
       skills: ["Node.js", "NestJs", "PostgreSQL", "MongoDB", "Redis", "GraphQL"],
       icon: Database
     },
     {
-      title: "DevOps",
+      title: t("about.devops"),
       skills: ["Docker", "AWS", "GCloud", "CI/CD", "GCP"],
       icon: Globe
     },
     {
-      title: "Testing",
+      title: t("about.testing"),
       skills: ["Jest", "Testing Library", "E2E", "Cypress"],
       icon: Smartphone
     }
@@ -60,7 +62,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 space-y-2">
           <h2 className="text-2xl md:text-3xl font-bold">
-            <span className="gradient-text">Skills</span> Técnicas
+            <span className="gradient-text">{t("about.title")}</span> {t("about.subtitle")}
           </h2>
         </div>
 
@@ -97,7 +99,7 @@ const About = () => {
               <CardContent className="p-6 text-center">
                 <div className="space-y-2">
                   <div className="text-3xl font-bold text-primary">4+</div>
-                  <div className="text-base text-muted-foreground">Años de experiencia</div>
+                  <div className="text-base text-muted-foreground">{t("about.yearsExperience")}</div>
                 </div>
               </CardContent>
             </Card>
@@ -105,7 +107,7 @@ const About = () => {
               <CardContent className="p-6 text-center">
                 <div className="space-y-2">
                   <div className="text-3xl font-bold text-primary">20+</div>
-                  <div className="text-base text-muted-foreground">Proyectos completados</div>
+                  <div className="text-base text-muted-foreground">{t("about.completedProjects")}</div>
                 </div>
               </CardContent>
             </Card>
@@ -113,7 +115,7 @@ const About = () => {
               <CardContent className="p-6 text-center">
                 <div className="space-y-2">
                   <div className="text-3xl font-bold text-primary">15+</div>
-                  <div className="text-base text-muted-foreground">Tecnologías dominadas</div>
+                  <div className="text-base text-muted-foreground">{t("about.masterTechnologies")}</div>
                 </div>
               </CardContent>
             </Card>

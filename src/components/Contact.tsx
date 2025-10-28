@@ -1,45 +1,48 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Linkedin, Github, MapPin } from "lucide-react";
-
-const contactMethods = [
-  {
-    icon: Mail,
-    title: "Email",
-    value: "contacto@ejemplo.com",
-    href: "mailto:contacto@ejemplo.com"
-  },
-  {
-    icon: Linkedin,
-    title: "LinkedIn",
-    value: "linkedin.com/in/agustin-gelos",
-    href: "https://linkedin.com"
-  },
-  {
-    icon: Github,
-    title: "GitHub",
-    value: "github.com/agelos",
-    href: "https://github.com"
-  },
-  {
-    icon: MapPin,
-    title: "Ubicación",
-    value: "Buenos Aires, Argentina",
-    href: null
-  }
-];
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
+  const contactMethods = [
+    {
+      icon: Mail,
+      title: t("contact.email"),
+      value: "contacto@ejemplo.com",
+      href: "mailto:contacto@ejemplo.com"
+    },
+    {
+      icon: Linkedin,
+      title: t("contact.linkedin"),
+      value: "linkedin.com/in/agustin-gelos",
+      href: "https://linkedin.com"
+    },
+    {
+      icon: Github,
+      title: t("contact.github"),
+      value: "github.com/agelos",
+      href: "https://github.com"
+    },
+    {
+      icon: MapPin,
+      title: t("contact.location"),
+      value: t("contact.locationValue"),
+      href: null
+    }
+  ];
+
   return (
     <section className="py-24 relative pattern-gradient-grid">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Trabajemos <span className="gradient-text">Juntos</span>
+              {t("contact.title")} <span className="gradient-text">{t("contact.titleHighlight")}</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              ¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte
+              {t("contact.subtitle")}
             </p>
           </div>
 
@@ -86,18 +89,18 @@ const Contact = () => {
           <Card className="bg-[var(--gradient-card)] border-primary/20 glow-effect">
             <CardContent className="p-8 text-center space-y-6">
               <h3 className="text-2xl font-bold">
-                ¿Listo para comenzar tu proyecto?
+                {t("contact.ctaTitle")}
               </h3>
               <p className="text-muted-foreground text-lg">
-                Estoy disponible para nuevas oportunidades y colaboraciones
+                {t("contact.ctaSubtitle")}
               </p>
-              <Button 
+              <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 glow-effect"
                 asChild
               >
                 <a href="mailto:contacto@ejemplo.com">
-                  Enviar Mensaje
+                  {t("contact.sendMessage")}
                   <Mail className="ml-2 h-4 w-4" />
                 </a>
               </Button>

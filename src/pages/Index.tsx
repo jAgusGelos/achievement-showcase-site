@@ -3,10 +3,15 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import LanguageToggle from "@/components/LanguageToggle";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
+      <LanguageToggle />
       <Hero />
       <div className="space-y-0">
         <About />
@@ -17,7 +22,7 @@ const Index = () => {
 
       <footer className="bg-muted/30 border-t border-border py-6">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p className="text-sm">© 2025 Agustín Gelos. Todos los derechos reservados.</p>
+          <p className="text-sm">{t("footer.copyright")}</p>
         </div>
       </footer>
     </div>

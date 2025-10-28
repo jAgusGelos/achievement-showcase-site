@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
 import ProjectGallery from "./ProjectGallery";
+import { useTranslation } from "react-i18next";
 
 interface Project {
   title: string;
@@ -15,10 +16,10 @@ interface Project {
   githubUrl?: string;
 }
 
-const projects: Project[] = [
+const getProjects = (t: any): Project[] => [
   {
-    title: "Sistema de Gestión Empresarial",
-    description: "Plataforma integral para gestión de recursos, inventario y procesos empresariales. Incluye dashboards personalizables, reportería avanzada y automatización de workflows.",
+    title: t("projects.items.erp.title"),
+    description: t("projects.items.erp.description"),
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
     images: ["/erp-1.png", "/erp-2.png", "/erp-3.png"],
     tags: ["React", "Node.js", "PostgreSQL", "Docker"],
@@ -26,8 +27,8 @@ const projects: Project[] = [
     githubUrl: "#"
   },
   {
-    title: "Plataforma de E-commerce",
-    description: "Solución completa de comercio electrónico con gestión de productos, carrito de compras,  y panel administrativo. Sistema de inventario y reportes avanzados.",
+    title: t("projects.items.ecommerce.title"),
+    description: t("projects.items.ecommerce.description"),
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
     images: ["/eccom-1.png", "/eccom-2.png", "/eccom-3.png"],
     tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
@@ -35,8 +36,8 @@ const projects: Project[] = [
     githubUrl: "#"
   },
   {
-    title: "Sistema de Reservas",
-    description: "Aplicación de reservas multi-negocio con calendario inteligente, notificaciones automáticas y gestión de recursos. Panel administrativo completo.",
+    title: t("projects.items.booking.title"),
+    description: t("projects.items.booking.description"),
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop",
     images: ["/beauty-1.png", "/beauty-2.png", "/beauty-3.png"],
     tags: ["React", "NestJs", "Stripe", "Firebase"],
@@ -46,6 +47,8 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
+  const { t } = useTranslation();
+  const projects = getProjects(t);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
@@ -64,13 +67,13 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 space-y-2">
           <div className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-2">
-            <span className="text-primary font-semibold text-base">Prometeo Software - Founder</span>
+            <span className="text-primary font-semibold text-base">{t("projects.founder")}</span>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold">
-            Proyectos <span className="gradient-text">Independientes</span>
+            {t("projects.title")} <span className="gradient-text">{t("projects.subtitle")}</span>
           </h2>
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-            Desarrollo de soluciones empresariales innovadoras como founder de Prometeo Software
+            {t("projects.description")}
           </p>
         </div>
 
@@ -135,8 +138,8 @@ const Projects = () => {
                       </Badge>
                     )}
                   </div>
-                  <Button 
-                    size="sm" 
+                  <Button
+                    size="sm"
                     variant="outline"
                     className="w-full mt-2 text-xs"
                     onClick={(e) => {
@@ -144,7 +147,7 @@ const Projects = () => {
                       openGallery(project);
                     }}
                   >
-                    Ver más
+                    {t("projects.viewMore")}
                   </Button>
                 </div>
               </CardContent>

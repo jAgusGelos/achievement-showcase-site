@@ -1,13 +1,16 @@
 import { Github, Linkedin, Mail, MapPin, Calendar, Award, Code2, Database, Globe, Smartphone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   const quickStats = [
-    { label: "Años de experiencia", value: "4+" },
-    { label: "Proyectos completados", value: "20+" },
-    { label: "Empresas internacionales", value: "3" },
-    { label: "Tecnologías dominadas", value: "15+" }
+    { label: t("hero.yearsExperience"), value: "4+" },
+    { label: t("hero.completedProjects"), value: "20+" },
+    { label: t("hero.internationalCompanies"), value: "3" },
+    { label: t("hero.masterTechnologies"), value: "15+" }
   ];
 
   const topSkills = [
@@ -15,17 +18,17 @@ const Hero = () => {
   ];
 
   const currentRole = {
-    title: "Fullstack React + NestJs Developer",
-    company: "Squaduplabs LLC",
-    location: "Boston, USA",
-    period: "Feb 2025 - Presente"
+    title: t("hero.position"),
+    company: t("hero.company"),
+    location: t("hero.companyLocation"),
+    period: t("hero.period")
   };
 
   const keyAchievements = [
-    "Desarrollo de MVP completo con arquitectura escalable",
-    "40% incremento en cobertura de tests",
-    "50% reducción en tiempo de deploy",
-    "Liderazgo y mentoría de desarrolladores"
+    t("hero.achievement1"),
+    t("hero.achievement2"),
+    t("hero.achievement3"),
+    t("hero.achievement4")
   ];
 
   return (
@@ -38,19 +41,19 @@ const Hero = () => {
           {/* Header Section */}
           <div className="text-center space-y-6 mb-12">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight">
-              <span className="gradient-text">Juan Agustín Gelos</span>
+              <span className="gradient-text">{t("hero.name")}</span>
             </h1>
             <p className="text-3xl md:text-4xl lg:text-5xl text-muted-foreground font-light">
-              Software Engineer - Fullstack Developer & Tech Lead
+              {t("hero.title")}
             </p>
             <div className="flex items-center justify-center gap-6 text-lg md:text-xl text-muted-foreground">
               <div className="flex items-center gap-2">
                 <MapPin className="h-6 w-6" />
-                <span>Córdoba, Argentina</span>
+                <span>{t("hero.location")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="h-6 w-6" />
-                <span>Disponible para proyectos</span>
+                <span>{t("hero.availability")}</span>
               </div>
             </div>
           </div>
@@ -64,7 +67,7 @@ const Hero = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary">
                       <Award className="h-6 w-6" />
-                      <span className="font-semibold text-lg">Rol Actual</span>
+                      <span className="font-semibold text-lg">{t("hero.currentRole")}</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-base">{currentRole.title}</h3>
@@ -80,7 +83,7 @@ const Hero = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary">
                       <Code2 className="h-6 w-6" />
-                      <span className="font-semibold text-lg">Estadísticas</span>
+                      <span className="font-semibold text-lg">{t("hero.stats")}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       {quickStats.map((stat, index) => (
@@ -102,7 +105,7 @@ const Hero = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary">
                       <Database className="h-6 w-6" />
-                      <span className="font-semibold text-lg">Skills Principales</span>
+                      <span className="font-semibold text-lg">{t("hero.topSkills")}</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {topSkills.map((skill, index) => (
@@ -120,7 +123,7 @@ const Hero = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary">
                       <Globe className="h-6 w-6" />
-                      <span className="font-semibold text-lg">Logros Clave</span>
+                      <span className="font-semibold text-lg">{t("hero.keyAchievements")}</span>
                     </div>
                     <ul className="space-y-2">
                       {keyAchievements.map((achievement, index) => (
@@ -142,7 +145,7 @@ const Hero = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary">
                       <Smartphone className="h-6 w-6" />
-                      <span className="font-semibold text-lg">Contacto</span>
+                      <span className="font-semibold text-lg">{t("hero.contact")}</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 text-base">
@@ -177,20 +180,20 @@ const Hero = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary">
                       <Award className="h-6 w-6" />
-                      <span className="font-semibold text-lg">Especialización</span>
+                      <span className="font-semibold text-lg">{t("hero.specialization")}</span>
                     </div>
                     <div className="space-y-3">
                       <div className="text-sm text-muted-foreground">
-                        <strong>Frontend:</strong> React, Next.js, TypeScript
+                        <strong>{t("hero.frontend")}:</strong> React, Next.js, TypeScript
                       </div>
                       <div className="text-sm text-muted-foreground">
-                        <strong>Backend:</strong> Node.js, NestJs, PostgreSQL
+                        <strong>{t("hero.backend")}:</strong> Node.js, NestJs, PostgreSQL
                       </div>
                       <div className="text-sm text-muted-foreground">
-                        <strong>DevOps:</strong> AWS, Docker, CI/CD
+                        <strong>{t("hero.devops")}:</strong> AWS, Docker, CI/CD
                       </div>
                       <div className="text-sm text-muted-foreground">
-                        <strong>Testing:</strong> Cypress, Jest
+                        <strong>{t("hero.testing")}:</strong> Cypress, Jest
                       </div>
                     </div>
                   </div>
@@ -202,7 +205,7 @@ const Hero = () => {
           {/* Call to Action */}
           <div className="text-center">
             <p className="text-lg md:text-xl text-muted-foreground mb-6">
-              Desarrollando soluciones full-stack escalables para empresas internacionales
+              {t("hero.cta")}
             </p>
             <a
               href="#experience"
@@ -212,7 +215,7 @@ const Hero = () => {
                 document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Ver Experiencia
+              {t("hero.viewExperience")}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>

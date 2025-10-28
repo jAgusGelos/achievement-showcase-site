@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Briefcase, Calendar, MapPin, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface ExperienceItem {
   title: string;
@@ -20,96 +21,66 @@ interface ExperienceItem {
   }>;
 }
 
-const experiences: ExperienceItem[] = [
+const getExperiences = (t: any): ExperienceItem[] => [
   {
-    title: "Ingeniero de Software",
-    company: "Squadup Labs",
-    location: "Remoto",
-    period: "2025 - Presente",
-    description: "Desarrollador full-stack construyendo plataformas SaaS escalables con tecnologías modernas. Lideró el desarrollo de 3 productos principales sirviendo a empresas de múltiples industrias.",
-    achievements: [
-      "Desarrolló arquitectura serverless escalable con 3 funciones Lambda especializadas procesando más de 10,000 escaneos mensuales de competidores",
-      "Implementó sistema automatizado de escaneo en cuadrícula reduciendo el tiempo de escaneo de 2 horas a 15 minutos por ubicación (mejora del 87.5%)",
-      "Optimizó consultas SQL complejas con CTEs y LATERAL JOINs, mejorando el rendimiento de reportes en 75% (de 8 segundos a 2 segundos)",
-      "Integró más de 8 servicios externos (Google Maps, Stripe, AWS Location, Slack, PostHog) con 99.9% de disponibilidad"
-    ],
+    title: t("experience.jobs.squadup.title"),
+    company: t("experience.jobs.squadup.company"),
+    location: t("experience.jobs.squadup.location"),
+    period: t("experience.jobs.squadup.period"),
+    description: t("experience.jobs.squadup.description"),
+    achievements: [],
     tags: ["NestJS", "React", "TypeScript", "PostgreSQL", "AWS Lambda", "AWS CDK", "Serverless", "TanStack Stack"],
-    detailedDescription: "Desarrollador full-stack construyendo plataformas SaaS escalables con tecnologías modernas. Lideró el desarrollo de 3 productos principales sirviendo a empresas de múltiples industrias.",
+    detailedDescription: t("experience.jobs.squadup.description"),
     projects: [
       {
-        name: "Local Business Protection - Plataforma de Monitoreo y Protección SEO Local",
-        description: "Sistema SaaS para monitoreo automatizado de competidores en Google Maps y protección de posicionamiento SEO local para negocios.",
-        achievements: [
-          "Desarrolló arquitectura serverless escalable con 3 funciones Lambda especializadas procesando más de 10,000 escaneos mensuales de competidores",
-          "Implementó sistema automatizado de escaneo en cuadrícula reduciendo el tiempo de escaneo de 2 horas a 15 minutos por ubicación (mejora del 87.5%)",
-          "Optimizó consultas SQL complejas con CTEs y LATERAL JOINs, mejorando el rendimiento de reportes en 75% (de 8 segundos a 2 segundos)",
-          "Integró más de 8 servicios externos (Google Maps, Stripe, AWS Location, Slack, PostHog) con 99.9% de disponibilidad"
-        ]
+        name: t("experience.jobs.squadup.projects.lbp.name"),
+        description: t("experience.jobs.squadup.projects.lbp.description"),
+        achievements: t("experience.jobs.squadup.projects.lbp.achievements", { returnObjects: true })
       },
       {
-        name: "Afterhour - Plataforma de Asistente de Voz con IA",
-        description: "Plataforma SaaS de asistentes de voz con IA para empresas (principalmente firmas legales) manejando llamadas entrantes 24/7 y calificación automática de prospectos.",
-        achievements: [
-          "Implementó sistema de asistente de voz con IA procesando y analizando llamadas en tiempo real, extrayendo información estructurada de clientes potenciales",
-          "Automatizó la calificación de prospectos con algoritmos de IA",
-          "Diseñó arquitectura multi-tenant escalable soportando múltiples organizaciones con control de acceso basado en roles"
-        ]
+        name: t("experience.jobs.squadup.projects.afterhour.name"),
+        description: t("experience.jobs.squadup.projects.afterhour.description"),
+        achievements: t("experience.jobs.squadup.projects.afterhour.achievements", { returnObjects: true })
       },
       {
-        name: "Aptiqude - Plataforma SaaS de Evaluación de Candidatos mediante Tests de IQ",
-        description: "Sistema completo de evaluación de talentos permitiendo a las empresas evaluar candidatos mediante tests de IQ con análisis avanzado de rendimiento y gestión integral del proceso de reclutamiento.",
-        achievements: [
-          "Desarrolló arquitectura multi-tenant escalable con aislamiento de datos por organización, manejando múltiples empresas simultáneamente",
-          "Implementó arquitectura serverless en AWS Lambda con despliegue automatizado",
-          "Optimizó rendimiento con lazy loading, code splitting y caché con TanStack Query, mejorando tiempos de carga en 40%"
-        ]
+        name: t("experience.jobs.squadup.projects.aptiqude.name"),
+        description: t("experience.jobs.squadup.projects.aptiqude.description"),
+        achievements: t("experience.jobs.squadup.projects.aptiqude.achievements", { returnObjects: true })
       }
     ]
   },
   {
-    title: "Fullstack React + Node Developer",
-    company: "Valdera Inc",
-    location: "San Francisco, USA",
-    period: "Abril 2022 - Feb 2025",
-    description: "Desarrollo de plataforma empresarial de alta escala",
-    achievements: [
-      "Feature Delivery: Entrega quincenal de nuevas funcionalidades mejorando la experiencia de usuario",
-      "Code Quality: Incremento del 40% en cobertura de tests, reduciendo defectos de producción en 20%",
-      "Shared Component Library: Diseño y mantenimiento de biblioteca de componentes reutilizables, acelerando desarrollo en 25%",
-      "CI/CD Optimization: Optimización de pipelines con GitHub Actions y GCloud Build, reduciendo tiempo de deploy en 50%",
-      "Leadership: Onboarding y mentoría de desarrolladores junior, fomentando cultura de colaboración"
-    ],
+    title: t("experience.jobs.valdera.title"),
+    company: t("experience.jobs.valdera.company"),
+    location: t("experience.jobs.valdera.location"),
+    period: t("experience.jobs.valdera.period"),
+    description: t("experience.jobs.valdera.description"),
+    achievements: t("experience.jobs.valdera.achievements", { returnObjects: true }),
     tags: ["React", "Node.js", "GitHub Actions", "GCloud", "Testing", "Mentoring"]
   },
   {
-    title: "Fullstack React + Node Developer",
-    company: "Darwoft S.A",
-    location: "Córdoba, Argentina",
-    period: "Mayo 2021 - Abril 2022",
-    description: "Desarrollo de MVPs y soluciones empresariales",
-    achievements: [
-      "MVP Development: Liderazgo en desarrollo de MVPs con ReactJS, incrementando velocidad de entrega en 30%",
-      "UI/UX Implementation: Desarrollo de componentes estilizados y responsive alineados con estándares modernos",
-      "Authentication Systems: Integración de soluciones de autenticación seguras multi-plataforma",
-      "Collaboration: Trabajo con equipos cross-funcionales para cumplir deadlines ajustados"
-    ],
+    title: t("experience.jobs.darwoft.title"),
+    company: t("experience.jobs.darwoft.company"),
+    location: t("experience.jobs.darwoft.location"),
+    period: t("experience.jobs.darwoft.period"),
+    description: t("experience.jobs.darwoft.description"),
+    achievements: t("experience.jobs.darwoft.achievements", { returnObjects: true }),
     tags: ["React", "Node.js", "Authentication", "UI/UX", "MVP Development"]
   },
   {
-    title: "Internship - Research & Development",
-    company: "Universidad Tecnológica Nacional",
-    location: "Córdoba, Argentina",
-    period: "Feb 2020 - Feb 2021",
-    description: "Investigación y desarrollo de soluciones innovadoras",
-    achievements: [
-      "Fullstack Development: Desarrollo de soluciones innovadoras usando .NET Core y FastAPI",
-      "Technical Documentation: Preparación de documentación detallada para facilitar desarrollo futuro"
-    ],
+    title: t("experience.jobs.utn.title"),
+    company: t("experience.jobs.utn.company"),
+    location: t("experience.jobs.utn.location"),
+    period: t("experience.jobs.utn.period"),
+    description: t("experience.jobs.utn.description"),
+    achievements: t("experience.jobs.utn.achievements", { returnObjects: true }),
     tags: [".NET Core", "FastAPI", "Python", "Documentation"]
   }
 ];
 
 const Experience = () => {
+  const { t } = useTranslation();
+  const experiences = getExperiences(t);
   const [expandedCards, setExpandedCards] = useState<number[]>([]);
   const [showAllExpanded, setShowAllExpanded] = useState(false);
 
@@ -144,11 +115,11 @@ const Experience = () => {
               onClick={toggleShowAll}
               className="ml-4"
             >
-              {showAllExpanded ? 'Ocultar todo' : 'Mostrar todo'}
+              {showAllExpanded ? t("experience.hideAll") : t("experience.showAll")}
             </Button>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold">
-            Experiencia <span className="gradient-text">Profesional</span>
+            {t("experience.title")} <span className="gradient-text">{t("experience.subtitle")}</span>
           </h2>
         </div>
 
@@ -246,7 +217,7 @@ const Experience = () => {
 
                                 {exp.projects && exp.projects.length > 0 && (
                                   <div className="space-y-4 mt-4">
-                                    <h4 className="text-sm font-semibold text-primary">Proyectos:</h4>
+                                    <h4 className="text-sm font-semibold text-primary">{t("experience.projects")}:</h4>
                                     {exp.projects.map((project, projectIndex) => (
                                       <div key={projectIndex} className="bg-muted/50 p-4 rounded-md space-y-3 transition-all duration-300">
                                         <h5 className="text-sm font-semibold">{project.name}</h5>
@@ -266,7 +237,7 @@ const Experience = () => {
 
                                 {(!exp.projects || exp.projects.length === 0) && exp.achievements.length > 0 && (
                                   <div className="space-y-3">
-                                    <h4 className="text-sm font-semibold text-primary">Logros:</h4>
+                                    <h4 className="text-sm font-semibold text-primary">{t("experience.achievements")}:</h4>
                                     <ul className="space-y-2">
                                       {exp.achievements.map((achievement, achIndex) => (
                                         <li key={achIndex} className="text-sm text-muted-foreground flex gap-2">
@@ -363,7 +334,7 @@ const Experience = () => {
 
                         {exp.projects && exp.projects.length > 0 && (
                           <div className="space-y-4 mt-4">
-                            <h4 className="text-sm font-semibold text-primary">Proyectos:</h4>
+                            <h4 className="text-sm font-semibold text-primary">{t("experience.projects")}:</h4>
                             {exp.projects.map((project, projectIndex) => (
                               <div key={projectIndex} className="bg-muted/50 p-4 rounded-md space-y-3 transition-all duration-300">
                                 <h5 className="text-sm font-semibold">{project.name}</h5>
@@ -383,7 +354,7 @@ const Experience = () => {
 
                         {(!exp.projects || exp.projects.length === 0) && exp.achievements.length > 0 && (
                           <div className="space-y-3">
-                            <h4 className="text-sm font-semibold text-primary">Logros:</h4>
+                            <h4 className="text-sm font-semibold text-primary">{t("experience.achievements")}:</h4>
                             <ul className="space-y-2">
                               {exp.achievements.map((achievement, achIndex) => (
                                 <li key={achIndex} className="text-sm text-muted-foreground flex gap-2">

@@ -1,0 +1,165 @@
+{
+  "hero": {
+    "name": "Juan Agustín Gelos",
+    "title": "Software Engineer - Fullstack Developer & Tech Lead",
+    "location": "Córdoba, Argentina",
+    "availability": "Available for projects",
+    "currentRole": "Current Role",
+    "company": "Squaduplabs LLC",
+    "companyLocation": "Boston, USA",
+    "period": "Feb 2025 - Present",
+    "position": "Fullstack React + NestJs Developer",
+    "stats": "Statistics",
+    "yearsExperience": "Years of experience",
+    "completedProjects": "Completed projects",
+    "internationalCompanies": "International companies",
+    "masterTechnologies": "Mastered technologies",
+    "topSkills": "Top Skills",
+    "keyAchievements": "Key Achievements",
+    "achievement1": "Full MVP development with scalable architecture",
+    "achievement2": "40% increase in test coverage",
+    "achievement3": "50% reduction in deployment time",
+    "achievement4": "Leadership and mentoring of developers",
+    "contact": "Contact",
+    "specialization": "Specialization",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "devops": "DevOps",
+    "testing": "Testing",
+    "cta": "Developing scalable full-stack solutions for international companies",
+    "viewExperience": "View Experience"
+  },
+  "about": {
+    "title": "Technical",
+    "subtitle": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "devops": "DevOps",
+    "testing": "Testing",
+    "yearsExperience": "Years of experience",
+    "completedProjects": "Completed projects",
+    "masterTechnologies": "Mastered technologies"
+  },
+  "experience": {
+    "title": "Professional",
+    "subtitle": "Experience",
+    "showAll": "Show all",
+    "hideAll": "Hide all",
+    "achievements": "Achievements",
+    "projects": "Projects",
+    "jobs": {
+      "squadup": {
+        "title": "Software Engineer",
+        "company": "Squadup Labs",
+        "location": "Remote",
+        "period": "2025 - Present",
+        "description": "Full-stack developer building scalable SaaS platforms with modern technologies. Led the development of 3 main products serving companies across multiple industries.",
+        "projects": {
+          "lbp": {
+            "name": "Local Business Protection - Local SEO Monitoring & Protection Platform",
+            "description": "SaaS system for automated competitor monitoring on Google Maps and local SEO positioning protection for businesses.",
+            "achievements": [
+              "Developed scalable serverless architecture with 3 specialized Lambda functions processing over 10,000 monthly competitor scans",
+              "Implemented automated grid scanning system reducing scan time from 2 hours to 15 minutes per location (87.5% improvement)",
+              "Optimized complex SQL queries with CTEs and LATERAL JOINs, improving report performance by 75% (from 8 seconds to 2 seconds)",
+              "Integrated 8+ external services (Google Maps, Stripe, AWS Location, Slack, PostHog) with 99.9% availability"
+            ]
+          },
+          "afterhour": {
+            "name": "Afterhour - AI Voice Assistant Platform",
+            "description": "AI-powered voice assistant SaaS platform for businesses (primarily law firms) handling 24/7 incoming calls and automatic prospect qualification.",
+            "achievements": [
+              "Implemented AI voice assistant system processing and analyzing calls in real-time, extracting structured information from potential clients",
+              "Automated prospect qualification with AI algorithms",
+              "Designed scalable multi-tenant architecture supporting multiple organizations with role-based access control"
+            ]
+          },
+          "aptiqude": {
+            "name": "Aptiqude - Candidate Assessment SaaS Platform via IQ Tests",
+            "description": "Complete talent assessment system allowing companies to evaluate candidates through IQ tests with advanced performance analysis and comprehensive recruitment process management.",
+            "achievements": [
+              "Developed scalable multi-tenant architecture with data isolation per organization, handling multiple companies simultaneously",
+              "Implemented serverless architecture on AWS Lambda with automated deployment",
+              "Optimized performance with lazy loading, code splitting, and caching with TanStack Query, improving load times by 40%"
+            ]
+          }
+        }
+      },
+      "valdera": {
+        "title": "Fullstack React + Node Developer",
+        "company": "Valdera Inc",
+        "location": "San Francisco, USA",
+        "period": "April 2022 - Feb 2025",
+        "description": "Development of high-scale enterprise platform",
+        "achievements": [
+          "Feature Delivery: Bi-weekly delivery of new features improving user experience",
+          "Code Quality: 40% increase in test coverage, reducing production defects by 20%",
+          "Shared Component Library: Design and maintenance of reusable component library, accelerating development by 25%",
+          "CI/CD Optimization: Pipeline optimization with GitHub Actions and GCloud Build, reducing deployment time by 50%",
+          "Leadership: Onboarding and mentoring of junior developers, fostering collaboration culture"
+        ]
+      },
+      "darwoft": {
+        "title": "Fullstack React + Node Developer",
+        "company": "Darwoft S.A",
+        "location": "Córdoba, Argentina",
+        "period": "May 2021 - April 2022",
+        "description": "Development of MVPs and business solutions",
+        "achievements": [
+          "MVP Development: Leadership in MVP development with ReactJS, increasing delivery speed by 30%",
+          "UI/UX Implementation: Development of styled and responsive components aligned with modern standards",
+          "Authentication Systems: Integration of secure multi-platform authentication solutions",
+          "Collaboration: Work with cross-functional teams to meet tight deadlines"
+        ]
+      },
+      "utn": {
+        "title": "Internship - Research & Development",
+        "company": "Universidad Tecnológica Nacional",
+        "location": "Córdoba, Argentina",
+        "period": "Feb 2020 - Feb 2021",
+        "description": "Research and development of innovative solutions",
+        "achievements": [
+          "Fullstack Development: Development of innovative solutions using .NET Core and FastAPI",
+          "Technical Documentation: Preparation of detailed documentation to facilitate future development"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "founder": "Prometeo Software - Founder",
+    "title": "Independent",
+    "subtitle": "Projects",
+    "description": "Development of innovative business solutions as founder of Prometeo Software",
+    "viewMore": "View more",
+    "items": {
+      "erp": {
+        "title": "Enterprise Management System",
+        "description": "Comprehensive platform for resource management, inventory, and business processes. Includes customizable dashboards, advanced reporting, and workflow automation."
+      },
+      "ecommerce": {
+        "title": "E-commerce Platform",
+        "description": "Complete e-commerce solution with product management, shopping cart, and admin panel. Inventory system and advanced reports."
+      },
+      "booking": {
+        "title": "Booking System",
+        "description": "Multi-business booking application with smart calendar, automatic notifications, and resource management. Complete admin panel."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Work",
+    "titleHighlight": "Together",
+    "subtitle": "Have a project in mind? Let's talk about how I can help you",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "location": "Location",
+    "locationValue": "Buenos Aires, Argentina",
+    "ctaTitle": "Ready to start your project?",
+    "ctaSubtitle": "I'm available for new opportunities and collaborations",
+    "sendMessage": "Send Message"
+  },
+  "footer": {
+    "copyright": "© 2025 Agustín Gelos. All rights reserved."
+  }
+}
