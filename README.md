@@ -1,73 +1,111 @@
-# Welcome to your Lovable project
+# Achievement Showcase Site
 
-## Project info
+Portfolio personal y CV interactivo de Agustín Gelos, Software Engineer con 4+ años de experiencia en desarrollo full-stack.
 
-**URL**: https://lovable.dev/projects/b80edde0-15cb-4da7-b090-db78d8aff41f
+## 🌐 Sitio en vivo
 
-## How can I edit this code?
+**URL**: [https://jAgusGelos.github.io/achievement-showcase-site/](https://jAgusGelos.github.io/achievement-showcase-site/)
 
-There are several ways of editing your application.
+## ✨ Características
 
-**Use Lovable**
+- **Portfolio Interactivo**: Showcase de proyectos y logros profesionales
+- **Experiencia Profesional**: Detalle de proyectos y tecnologías utilizadas
+- **Galería de Proyectos**: Visualización de trabajos realizados con screenshots
+- **Información de Contacto**: Formulario y enlaces de contacto
+- **Internacionalización**: Soporte para múltiples idiomas (español/inglés)
+- **Diseño Moderno**: UI responsiva con Tailwind CSS y shadcn/ui
+- **Tema Oscuro**: Compatible con modo claro y oscuro
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b80edde0-15cb-4da7-b090-db78d8aff41f) and start prompting.
+## 🛠️ Tecnologías
 
-Changes made via Lovable will be committed automatically to this repo.
+Este proyecto está construido con:
 
-**Use your preferred IDE**
+- **Vite** - Build tool y dev server
+- **React 18** - Framework UI
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - Componentes UI
+- **i18next** - Internacionalización
+- **React Router** - Navegación
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Desarrollo Local
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisitos
 
-Follow these steps:
+- Node.js 20+ y npm instalados - [instalar con nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+### Instalación
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clonar el repositorio
+git clone https://github.com/jAgusGelos/achievement-showcase-site.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navegar al directorio del proyecto
+cd achievement-showcase-site
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Instalar dependencias
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Iniciar el servidor de desarrollo
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+El sitio estará disponible en `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Scripts Disponibles
 
-**Use GitHub Codespaces**
+```sh
+# Desarrollo
+npm run dev          # Inicia el servidor de desarrollo
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Build
+npm run build        # Build de producción
+npm run build:dev    # Build en modo desarrollo
 
-## What technologies are used for this project?
+# Preview
+npm run preview      # Preview del build de producción
 
-This project is built with:
+# Linting
+npm run lint         # Ejecuta el linter
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🚢 Deployment
 
-## How can I deploy this project?
+El sitio se despliega automáticamente a GitHub Pages mediante GitHub Actions cuando se hace push a la rama `main`.
 
-Simply open [Lovable](https://lovable.dev/projects/b80edde0-15cb-4da7-b090-db78d8aff41f) and click on Share -> Publish.
+El workflow de deployment:
+1. Instala dependencias
+2. Ejecuta el build de producción
+3. Despliega a GitHub Pages
 
-## Can I connect a custom domain to my Lovable project?
+Ver el workflow completo en `.github/workflows/deploy.yml`
 
-Yes, you can!
+## 📂 Estructura del Proyecto
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```
+achievement-showcase-site/
+├── src/
+│   ├── components/      # Componentes React
+│   │   ├── ui/         # Componentes UI de shadcn
+│   │   ├── Hero.tsx    # Sección Hero
+│   │   ├── About.tsx   # Sección Acerca de
+│   │   ├── Experience.tsx  # Experiencia profesional
+│   │   ├── Projects.tsx    # Proyectos
+│   │   └── Contact.tsx     # Contacto
+│   ├── i18n/           # Configuración de internacionalización
+│   ├── pages/          # Páginas de la aplicación
+│   └── App.tsx         # Componente principal
+├── public/             # Assets estáticos
+└── screenshots-*/      # Screenshots de proyectos
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 👨‍💻 Autor
+
+**Agustín Gelos**
+- Email: agelos@itba.edu.ar
+- LinkedIn: [agustin-gelos](https://www.linkedin.com/in/agustin-gelos)
+- GitHub: [agustin-gelos](https://github.com/agustin-gelos)
+
+## 📄 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
