@@ -1,103 +1,93 @@
-# Agustín Gelos
+# Juan Agustin Gelos
 
-**Software Engineer**
+**Software Engineer | Fullstack Developer**
 
-📧 juanagustingelos1@gmail.com | 📱 +54 9 11 6825-2171
-🔗 [LinkedIn](https://www.linkedin.com/in/agustin-gelos) | 💻 [GitHub](https://github.com/agustin-gelos)
-
----
-
-## Summary
-
-Software Engineer with 4+ years of experience in full-stack development, specializing in building scalable web applications and microservices. Passionate about clean code, best practices, and continuous learning. Strong background in backend development with Node.js and Python, and frontend development with React.
+📞 +54 351 3590554 | 📧 juanagustingelos@gmail.com
+📍 Córdoba, Argentina | 🔗 [linkedin.com/in/juan-agustin-gelos](https://linkedin.com/in/juan-agustin-gelos)
 
 ---
 
-## Experience
+## Professional Summary
 
-### **Software Engineer** | Squadup Labs
-*Remote*
-
-Full-stack developer building scalable SaaS platforms with modern technologies. Led development of 3 major products serving businesses across multiple industries.
-
-**Core Technologies:** NestJS, React, TypeScript, PostgreSQL, AWS Lambda, AWS CDK, Serverless Architecture, TanStack Stack (Query, Router, Form), Tailwind CSS, Vite
-
-**Integration & Services:** Stripe, Clerk Auth, AWS Cognito, Twilio, VAPI, SerpAPI, Google Maps API, AWS SES, AWS SQS, AWS S3, Sentry, Slack, PostHog
-
-**Infrastructure & DevOps:** AWS Lambda, AWS CDK, TypeORM, Infrastructure as Code, CI/CD, Multi-environment deployments (dev/staging/prod)
-
-**Best Practices:** TypeScript strict mode, Zod validation, Biome linting, automated testing, code quality standards
+Software Engineer with 4+ years building production SaaS platforms from the ground up. Specialized in serverless AWS architectures, modern fullstack development (React, NestJS, TypeScript), and multi-tenant applications. Experience spans voice AI systems, HR tech, and business intelligence, with focus on scalable solutions handling high transaction volumes.
 
 ---
 
-#### **Local Business Protection** - SEO Local Monitoring & Protection Platform
-*Full-Stack Developer*
+## Technical Skills
 
-SaaS system for automated competitor monitoring on Google Maps and local SEO positioning protection for businesses.
+**Frontend:** React 19, Angular, Next.js, Vite, TanStack Router/Query/Form, Tailwind CSS, Radix UI, ShadcnUI
 
-**Key Achievements:**
-- Developed scalable serverless architecture with 3 specialized Lambda functions processing 10,000+ monthly competitor scans
-- Implemented automated grid scanning system reducing scan time from 2 hours to 15 minutes per location (87.5% improvement)
-- Optimized complex SQL queries with CTEs and LATERAL JOINs, improving report performance by 75% (from 8 seconds to 2 seconds)
-- Integrated 8+ external services (Google Maps, Stripe, AWS Location, Slack, PostHog) with 99.9% uptime
+**Backend:** NestJS, Node.js, TypeORM, AWS Lambda, PostgreSQL, MongoDB, Firebase
 
+**Languages:** TypeScript, JavaScript, Python, SQL, R
 
-#### **Afterhour** - Voice AI Assistant Platform
-*Full-Stack Developer*
+**AWS Services:** Lambda, CDK, S3, SQS, RDS, CloudFront, EventBridge, Cognito, SES, CloudFormation
 
-SaaS platform for AI voice assistants for businesses (primarily law firms) handling 24/7 inbound calls and automatic lead qualification.
+**Integrations:** Stripe, Twilio, Vapi (Voice AI), Clerk, Better Auth, Google Maps API, SerpAPI, Slack API
 
-**Key Achievements:**
-- Implemented AI voice assistant system processing and analyzing real-time calls, extracting structured information from potential clients
-- Automated lead qualification with AI algorithms.
-- Designed scalable multi-tenant architecture supporting multiple organizations with role-based access control
+**Testing:** Jest, Cypress (E2E), Vitest, Supertest
 
+**CI/CD:** GitHub Actions, GCloud Build, Docker, Serverless Framework
 
-#### **Aptiqude** - SaaS Candidate Assessment Platform via IQ Tests
-*Full-Stack Developer*
+**Tools:** Datadog, SendGrid, Bubble, Easypost, Sentry, PostHog, Google Analytics
 
-Complete talent assessment system enabling companies to evaluate candidates through IQ tests with advanced performance analysis and comprehensive recruitment process management.
+---
 
-**Key Achievements:**
-- Developed scalable multi-tenant architecture with data isolation per organization, handling multiple companies simultaneously
-- Implemented serverless architecture on AWS Lambda with automated deployment.
-- Optimized performance with lazy loading, code splitting, and caching with TanStack Query, improving load times by 40%
+## Professional Experience
+
+### Fullstack React + NestJS Developer
+**Squaduplabs LLC** – Boston, MA | Feb 2025 - Present
+
+**Enterprise SaaS Development:** Tasked with building 3 production platforms from scratch with tight deadlines and low existing infrastructure. Architected and delivered complete SaaS applications (Voice AI for legal tech, HR assessments, business intelligence) using React, NestJS, and multi-tenant database designs with 20+ entities each.
+
+**AWS Serverless Architecture:** Company needed cost-effective scalable infrastructure. Designed serverless solutions using AWS Lambda, CDK, SQS queues, S3 storage, EventBridge schedulers, and CloudFront CDN. Cut infrastructure costs by 40% vs traditional servers while handling thousands of daily transactions.
+
+**Voice AI Platform:** Legal firms needed automated 24/7 client intake. Built end-to-end call management system integrating Vapi and Twilio for AI-powered phone assistants, with call recording, transcription, lead qualification algorithms, and real-time Email/SMS notifications. System now handles client screening autonomously, qualifying leads while attorneys sleep.
+
+**Advanced Web Scraping:** Required large-scale data extraction from Google Maps without triggering rate limits. Engineered scraping system with header spoofing and proxy rotation to reliably gather business intelligence at scale. Database now powers competitive analysis features.
+
+**Payment & Testing Infrastructure:** Implemented Stripe subscriptions, webhooks, and credit-based billing across all products. Established comprehensive testing (Jest, E2E via GitHub Actions) with strict TypeScript standards, reducing production defects 35%.
+
+---
+
+### Fullstack React + Node Developer
+**Valdera Inc** – San Francisco, CA | April 2022 - Feb 2025
+
+**Data Engineering at Scale:** Chemical supplier data was fragmented across hundreds of websites with no centralized source. Architected custom scraping pipelines for 10+ sites using user-agent rotation, request throttling, and session management to avoid detection. Built industry-leading database with 50,000+ supplier records that became core competitive advantage.
+
+**Quality & Testing Initiative:** Production defects were impacting customer trust. Led testing overhaul that increased Cypress E2E coverage from 15% to 55% with automated regression testing in CI/CD. Reduced defects by 20% while maintaining bi-weekly release cadence over 3 years.
+
+**Component Library:** Teams were duplicating UI code across projects. Designed and built shared React + TypeScript component library with consistent patterns. Reduced code duplication 40%, accelerated feature development 25%, and library was adopted by 3 products.
+
+**CI/CD Optimization:** Deployment bottlenecks were slowing releases. Refactored GitHub Actions and GCloud Build pipelines with parallel test execution and intelligent caching. Cut deployment time from 12 to 6 minutes (50% faster).
+
+**Technical Mentorship:** Trained 3 junior developers on React patterns, TypeScript best practices, and component architecture design.
+
+---
+
+### Fullstack React + Node Developer
+**Darwoft S.A** – Córdoba, Argentina | May 2021 - April 2022
+
+**Rapid MVP Development:** Clients needed fast time-to-market for validation. Led ReactJS development for 3 MVPs using agile methodology and rapid iteration cycles. Accelerated delivery speed 30% through smart component reuse and efficient state management. All 3 launched on time and transitioned to production with customers.
+
+**Authentication Systems:** Projects required secure multi-platform authentication. Integrated and configured AWS Cognito, Clerk, and Better Auth with OAuth flows, session management, and role-based access control across different client tech stacks.
+
+**Responsive UI/UX:** Built component libraries matching each client's design system with cross-browser compatibility and mobile-first approach, establishing foundation for long-term product evolution.
 
 ---
 
 ## Education
 
-### **Universidad Tecnológica Nacional**
-*System Engineer*
-*2017 - 2021 | Cordoba, Argentina*
+### Information System Engineer
+**Universidad Tecnológica Nacional** – Córdoba, Argentina | 2017-2021
+
+### Machine Learning and Big Data
+**UDEMY** | 105H
 
 ---
 
-## Skills
+## Languages
 
-**Programming Languages:** JavaScript, TypeScript, Python, Java, C, C++
-
-**Frontend:** React, Redux, HTML5, CSS3, Material-UI, Bootstrap
-
-**Backend:** Node.js, Express, Django, Flask, Spring Boot
-
-**Databases:** PostgreSQL, MySQL, MongoDB, Redis
-
-**Tools & Technologies:** Git, Docker, Kubernetes, AWS, CI/CD, REST APIs, GraphQL
-
-**Languages:** Spanish (Native), English (Fluent)
-
----
-
-## Projects
-
-### **E-commerce Platform**
-- Built a full-stack e-commerce platform with React and Node.js
-- Implemented user authentication, product catalog, shopping cart, and payment processing
-- Deployed on AWS using Docker and implemented CI/CD pipelines
-
-### **Task Management Application**
-- Developed a collaborative task management tool with real-time updates
-- Used WebSockets for real-time communication between users
-- Implemented role-based access control and team collaboration features
-
+- **Spanish:** Native
+- **English:** Professional Advanced
+- **Italian:** Mid Conversational

@@ -1,14 +1,14 @@
 {
   "hero": {
     "name": "Juan Agustín Gelos",
-    "title": "Software Engineer - Fullstack Developer & Tech Lead",
+    "title": "Software Engineer | Fullstack Developer",
     "location": "Córdoba, Argentina",
     "availability": "Disponible para proyectos",
     "currentRole": "Rol Actual",
     "company": "Squaduplabs LLC",
-    "companyLocation": "Boston, USA",
+    "companyLocation": "Boston, MA",
     "period": "Feb 2025 - Presente",
-    "position": "Fullstack React + NestJs Developer",
+    "position": "Fullstack React + NestJS Developer",
     "stats": "Estadísticas",
     "yearsExperience": "Años de experiencia",
     "completedProjects": "Proyectos completados",
@@ -16,10 +16,10 @@
     "masterTechnologies": "Tecnologías dominadas",
     "topSkills": "Skills Principales",
     "keyAchievements": "Logros Clave",
-    "achievement1": "Desarrollo de MVP completo con arquitectura escalable",
-    "achievement2": "40% incremento en cobertura de tests",
+    "achievement1": "Construí 3 plataformas SaaS de producción desde cero",
+    "achievement2": "Reducción del 40% en costos de infraestructura AWS",
     "achievement3": "50% reducción en tiempo de deploy",
-    "achievement4": "Liderazgo y mentoría de desarrolladores",
+    "achievement4": "Mentoría de 3 desarrolladores junior",
     "contact": "Contacto",
     "specialization": "Especialización",
     "frontend": "Frontend",
@@ -49,38 +49,38 @@
     "projects": "Proyectos",
     "jobs": {
       "squadup": {
-        "title": "Ingeniero de Software",
-        "company": "Squadup Labs",
-        "location": "Remoto",
-        "period": "2025 - Presente",
-        "description": "Desarrollador full-stack construyendo plataformas SaaS escalables con tecnologías modernas. Lideró el desarrollo de 3 productos principales sirviendo a empresas de múltiples industrias.",
+        "title": "Fullstack React + NestJS Developer",
+        "company": "Squaduplabs LLC",
+        "location": "Boston, MA (Remoto)",
+        "period": "Feb 2025 - Presente",
+        "description": "Desarrollo de plataformas SaaS empresariales: Construí 3 plataformas de producción desde cero con plazos ajustados. Arquitecté y entregué aplicaciones SaaS completas (Voice AI para legal tech, evaluaciones HR, business intelligence) usando React, NestJS y diseños multi-tenant con 20+ entidades cada una.",
         "projects": {
           "lbp": {
-            "name": "Local Business Protection - Plataforma de Monitoreo y Protección SEO Local",
-            "description": "Sistema SaaS para monitoreo automatizado de competidores en Google Maps y protección de posicionamiento SEO local para negocios.",
+            "name": "Voice AI Platform - Sistema de llamadas para firmas legales",
+            "description": "Las firmas legales necesitaban intake automatizado de clientes 24/7. Construí sistema end-to-end de gestión de llamadas integrando Vapi y Twilio para asistentes telefónicos con IA.",
             "achievements": [
-              "Desarrolló arquitectura serverless escalable con 3 funciones Lambda especializadas procesando más de 10,000 escaneos mensuales de competidores",
-              "Implementó sistema automatizado de escaneo en cuadrícula reduciendo el tiempo de escaneo de 2 horas a 15 minutos por ubicación (mejora del 87.5%)",
-              "Optimizó consultas SQL complejas con CTEs y LATERAL JOINs, mejorando el rendimiento de reportes en 75% (de 8 segundos a 2 segundos)",
-              "Integró más de 8 servicios externos (Google Maps, Stripe, AWS Location, Slack, PostHog) con 99.9% de disponibilidad"
+              "Sistema de grabación de llamadas, transcripción, algoritmos de calificación de leads y notificaciones Email/SMS en tiempo real",
+              "El sistema ahora maneja screening de clientes de forma autónoma, calificando leads mientras los abogados duermen",
+              "Diseñé soluciones serverless usando AWS Lambda, CDK, SQS, S3, EventBridge y CloudFront CDN",
+              "Reducción del 40% en costos de infraestructura vs servidores tradicionales manejando miles de transacciones diarias"
             ]
           },
           "afterhour": {
-            "name": "Afterhour - Plataforma de Asistente de Voz con IA",
-            "description": "Plataforma SaaS de asistentes de voz con IA para empresas (principalmente firmas legales) manejando llamadas entrantes 24/7 y calificación automática de prospectos.",
+            "name": "Advanced Web Scraping - Sistema de extracción de datos",
+            "description": "Requerido extracción de datos a gran escala de Google Maps sin disparar rate limits.",
             "achievements": [
-              "Implementó sistema de asistente de voz con IA procesando y analizando llamadas en tiempo real, extrayendo información estructurada de clientes potenciales",
-              "Automatizó la calificación de prospectos con algoritmos de IA",
-              "Diseñó arquitectura multi-tenant escalable soportando múltiples organizaciones con control de acceso basado en roles"
+              "Ingeniería de sistema de scraping con header spoofing y rotación de proxies para recolectar business intelligence a escala",
+              "La base de datos ahora alimenta features de análisis competitivo",
+              "Implementé Stripe subscriptions, webhooks y billing basado en créditos en todos los productos"
             ]
           },
           "aptiqude": {
-            "name": "Aptiqude - Plataforma SaaS de Evaluación de Candidatos mediante Tests de IQ",
-            "description": "Sistema completo de evaluación de talentos permitiendo a las empresas evaluar candidatos mediante tests de IQ con análisis avanzado de rendimiento y gestión integral del proceso de reclutamiento.",
+            "name": "Payment & Testing Infrastructure",
+            "description": "Infraestructura de pagos y testing comprehensivo.",
             "achievements": [
-              "Desarrolló arquitectura multi-tenant escalable con aislamiento de datos por organización, manejando múltiples empresas simultáneamente",
-              "Implementó arquitectura serverless en AWS Lambda con despliegue automatizado",
-              "Optimizó rendimiento con lazy loading, code splitting y caché con TanStack Query, mejorando tiempos de carga en 40%"
+              "Establecí testing comprehensivo (Jest, E2E via GitHub Actions) con estándares estrictos de TypeScript",
+              "Reducción del 35% en defectos de producción",
+              "Arquitectura multi-tenant con aislamiento de datos por organización"
             ]
           }
         }
@@ -88,15 +88,18 @@
       "valdera": {
         "title": "Fullstack React + Node Developer",
         "company": "Valdera Inc",
-        "location": "San Francisco, USA",
+        "location": "San Francisco, CA (Remoto)",
         "period": "Abril 2022 - Feb 2025",
-        "description": "Desarrollo de plataforma empresarial de alta escala",
+        "description": "Data Engineering at Scale: Los datos de proveedores químicos estaban fragmentados en cientos de sitios web sin fuente centralizada.",
         "achievements": [
-          "Feature Delivery: Entrega quincenal de nuevas funcionalidades mejorando la experiencia de usuario",
-          "Code Quality: Incremento del 40% en cobertura de tests, reduciendo defectos de producción en 20%",
-          "Shared Component Library: Diseño y mantenimiento de biblioteca de componentes reutilizables, acelerando desarrollo en 25%",
-          "CI/CD Optimization: Optimización de pipelines con GitHub Actions y GCloud Build, reduciendo tiempo de deploy en 50%",
-          "Leadership: Onboarding y mentoría de desarrolladores junior, fomentando cultura de colaboración"
+          "Arquitecté pipelines de scraping personalizados para 10+ sitios usando rotación de user-agent, throttling de requests y session management",
+          "Construí base de datos líder de industria con 50,000+ registros de proveedores que se convirtió en ventaja competitiva core",
+          "Lideré overhaul de testing incrementando cobertura Cypress E2E de 15% a 55% con regression testing automatizado en CI/CD",
+          "Reducción de defectos en 20% manteniendo cadencia de releases bi-semanales por 3 años",
+          "Diseñé y construí biblioteca compartida de componentes React + TypeScript reduciendo duplicación de código 40%",
+          "Refactoricé pipelines de GitHub Actions y GCloud Build con ejecución paralela de tests y caching inteligente",
+          "Reducción del tiempo de deploy de 12 a 6 minutos (50% más rápido)",
+          "Entrené 3 desarrolladores junior en patrones React, best practices TypeScript y diseño de arquitectura de componentes"
         ]
       },
       "darwoft": {
@@ -104,23 +107,24 @@
         "company": "Darwoft S.A",
         "location": "Córdoba, Argentina",
         "period": "Mayo 2021 - Abril 2022",
-        "description": "Desarrollo de MVPs y soluciones empresariales",
+        "description": "Desarrollo rápido de MVPs para validación de clientes.",
         "achievements": [
-          "MVP Development: Liderazgo en desarrollo de MVPs con ReactJS, incrementando velocidad de entrega en 30%",
-          "UI/UX Implementation: Desarrollo de componentes estilizados y responsive alineados con estándares modernos",
-          "Authentication Systems: Integración de soluciones de autenticación seguras multi-plataforma",
-          "Collaboration: Trabajo con equipos cross-funcionales para cumplir deadlines ajustados"
+          "Lideré desarrollo ReactJS para 3 MVPs usando metodología ágil y ciclos de iteración rápida",
+          "Aceleré velocidad de entrega 30% mediante reutilización inteligente de componentes y gestión eficiente de estado",
+          "Los 3 proyectos lanzaron a tiempo y transicionaron a producción con clientes",
+          "Integré y configuré AWS Cognito, Clerk y Better Auth con OAuth flows, session management y control de acceso basado en roles",
+          "Construí bibliotecas de componentes matching cada design system de cliente con compatibilidad cross-browser y enfoque mobile-first"
         ]
       },
       "utn": {
-        "title": "Internship - Research & Development",
+        "title": "Information System Engineer",
         "company": "Universidad Tecnológica Nacional",
         "location": "Córdoba, Argentina",
-        "period": "Feb 2020 - Feb 2021",
-        "description": "Investigación y desarrollo de soluciones innovadoras",
+        "period": "2017 - 2021",
+        "description": "Ingeniería en Sistemas de Información",
         "achievements": [
-          "Fullstack Development: Desarrollo de soluciones innovadoras usando .NET Core y FastAPI",
-          "Technical Documentation: Preparación de documentación detallada para facilitar desarrollo futuro"
+          "Machine Learning and Big Data - UDEMY (105H)",
+          "Español: Nativo | Inglés: Profesional Avanzado | Italiano: Conversacional"
         ]
       }
     }
@@ -154,12 +158,12 @@
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "location": "Ubicación",
-    "locationValue": "Buenos Aires, Argentina",
+    "locationValue": "Córdoba, Argentina",
     "ctaTitle": "¿Listo para comenzar tu proyecto?",
     "ctaSubtitle": "Estoy disponible para nuevas oportunidades y colaboraciones",
     "sendMessage": "Enviar Mensaje"
   },
   "footer": {
-    "copyright": "© 2025 Agustín Gelos. Todos los derechos reservados."
+    "copyright": "© 2025 Juan Agustín Gelos. Todos los derechos reservados."
   }
 }

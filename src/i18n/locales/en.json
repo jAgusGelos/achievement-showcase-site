@@ -1,14 +1,14 @@
 {
   "hero": {
     "name": "Juan Agustín Gelos",
-    "title": "Software Engineer - Fullstack Developer & Tech Lead",
+    "title": "Software Engineer | Fullstack Developer",
     "location": "Córdoba, Argentina",
     "availability": "Available for projects",
     "currentRole": "Current Role",
     "company": "Squaduplabs LLC",
-    "companyLocation": "Boston, USA",
+    "companyLocation": "Boston, MA",
     "period": "Feb 2025 - Present",
-    "position": "Fullstack React + NestJs Developer",
+    "position": "Fullstack React + NestJS Developer",
     "stats": "Statistics",
     "yearsExperience": "Years of experience",
     "completedProjects": "Completed projects",
@@ -16,10 +16,10 @@
     "masterTechnologies": "Mastered technologies",
     "topSkills": "Top Skills",
     "keyAchievements": "Key Achievements",
-    "achievement1": "Full MVP development with scalable architecture",
-    "achievement2": "40% increase in test coverage",
+    "achievement1": "Built 3 production SaaS platforms from scratch",
+    "achievement2": "40% reduction in AWS infrastructure costs",
     "achievement3": "50% reduction in deployment time",
-    "achievement4": "Leadership and mentoring of developers",
+    "achievement4": "Mentored 3 junior developers",
     "contact": "Contact",
     "specialization": "Specialization",
     "frontend": "Frontend",
@@ -49,38 +49,38 @@
     "projects": "Projects",
     "jobs": {
       "squadup": {
-        "title": "Software Engineer",
-        "company": "Squadup Labs",
-        "location": "Remote",
-        "period": "2025 - Present",
-        "description": "Full-stack developer building scalable SaaS platforms with modern technologies. Led the development of 3 main products serving companies across multiple industries.",
+        "title": "Fullstack React + NestJS Developer",
+        "company": "Squaduplabs LLC",
+        "location": "Boston, MA (Remote)",
+        "period": "Feb 2025 - Present",
+        "description": "Enterprise SaaS Development: Tasked with building 3 production platforms from scratch with tight deadlines. Architected and delivered complete SaaS applications (Voice AI for legal tech, HR assessments, business intelligence) using React, NestJS, and multi-tenant database designs with 20+ entities each.",
         "projects": {
           "lbp": {
-            "name": "Local Business Protection - Local SEO Monitoring & Protection Platform",
-            "description": "SaaS system for automated competitor monitoring on Google Maps and local SEO positioning protection for businesses.",
+            "name": "Voice AI Platform - Call system for legal firms",
+            "description": "Legal firms needed automated 24/7 client intake. Built end-to-end call management system integrating Vapi and Twilio for AI-powered phone assistants.",
             "achievements": [
-              "Developed scalable serverless architecture with 3 specialized Lambda functions processing over 10,000 monthly competitor scans",
-              "Implemented automated grid scanning system reducing scan time from 2 hours to 15 minutes per location (87.5% improvement)",
-              "Optimized complex SQL queries with CTEs and LATERAL JOINs, improving report performance by 75% (from 8 seconds to 2 seconds)",
-              "Integrated 8+ external services (Google Maps, Stripe, AWS Location, Slack, PostHog) with 99.9% availability"
+              "Call recording, transcription, lead qualification algorithms, and real-time Email/SMS notifications",
+              "System now handles client screening autonomously, qualifying leads while attorneys sleep",
+              "Designed serverless solutions using AWS Lambda, CDK, SQS, S3, EventBridge, and CloudFront CDN",
+              "Cut infrastructure costs by 40% vs traditional servers while handling thousands of daily transactions"
             ]
           },
           "afterhour": {
-            "name": "Afterhour - AI Voice Assistant Platform",
-            "description": "AI-powered voice assistant SaaS platform for businesses (primarily law firms) handling 24/7 incoming calls and automatic prospect qualification.",
+            "name": "Advanced Web Scraping - Data extraction system",
+            "description": "Required large-scale data extraction from Google Maps without triggering rate limits.",
             "achievements": [
-              "Implemented AI voice assistant system processing and analyzing calls in real-time, extracting structured information from potential clients",
-              "Automated prospect qualification with AI algorithms",
-              "Designed scalable multi-tenant architecture supporting multiple organizations with role-based access control"
+              "Engineered scraping system with header spoofing and proxy rotation to reliably gather business intelligence at scale",
+              "Database now powers competitive analysis features",
+              "Implemented Stripe subscriptions, webhooks, and credit-based billing across all products"
             ]
           },
           "aptiqude": {
-            "name": "Aptiqude - Candidate Assessment SaaS Platform via IQ Tests",
-            "description": "Complete talent assessment system allowing companies to evaluate candidates through IQ tests with advanced performance analysis and comprehensive recruitment process management.",
+            "name": "Payment & Testing Infrastructure",
+            "description": "Comprehensive payment and testing infrastructure.",
             "achievements": [
-              "Developed scalable multi-tenant architecture with data isolation per organization, handling multiple companies simultaneously",
-              "Implemented serverless architecture on AWS Lambda with automated deployment",
-              "Optimized performance with lazy loading, code splitting, and caching with TanStack Query, improving load times by 40%"
+              "Established comprehensive testing (Jest, E2E via GitHub Actions) with strict TypeScript standards",
+              "Reduced production defects by 35%",
+              "Multi-tenant architecture with data isolation per organization"
             ]
           }
         }
@@ -88,15 +88,18 @@
       "valdera": {
         "title": "Fullstack React + Node Developer",
         "company": "Valdera Inc",
-        "location": "San Francisco, USA",
+        "location": "San Francisco, CA (Remote)",
         "period": "April 2022 - Feb 2025",
-        "description": "Development of high-scale enterprise platform",
+        "description": "Data Engineering at Scale: Chemical supplier data was fragmented across hundreds of websites with no centralized source.",
         "achievements": [
-          "Feature Delivery: Bi-weekly delivery of new features improving user experience",
-          "Code Quality: 40% increase in test coverage, reducing production defects by 20%",
-          "Shared Component Library: Design and maintenance of reusable component library, accelerating development by 25%",
-          "CI/CD Optimization: Pipeline optimization with GitHub Actions and GCloud Build, reducing deployment time by 50%",
-          "Leadership: Onboarding and mentoring of junior developers, fostering collaboration culture"
+          "Architected custom scraping pipelines for 10+ sites using user-agent rotation, request throttling, and session management",
+          "Built industry-leading database with 50,000+ supplier records that became core competitive advantage",
+          "Led testing overhaul that increased Cypress E2E coverage from 15% to 55% with automated regression testing in CI/CD",
+          "Reduced defects by 20% while maintaining bi-weekly release cadence over 3 years",
+          "Designed and built shared React + TypeScript component library reducing code duplication by 40%",
+          "Refactored GitHub Actions and GCloud Build pipelines with parallel test execution and intelligent caching",
+          "Cut deployment time from 12 to 6 minutes (50% faster)",
+          "Trained 3 junior developers on React patterns, TypeScript best practices, and component architecture design"
         ]
       },
       "darwoft": {
@@ -104,23 +107,24 @@
         "company": "Darwoft S.A",
         "location": "Córdoba, Argentina",
         "period": "May 2021 - April 2022",
-        "description": "Development of MVPs and business solutions",
+        "description": "Rapid MVP Development: Clients needed fast time-to-market for validation.",
         "achievements": [
-          "MVP Development: Leadership in MVP development with ReactJS, increasing delivery speed by 30%",
-          "UI/UX Implementation: Development of styled and responsive components aligned with modern standards",
-          "Authentication Systems: Integration of secure multi-platform authentication solutions",
-          "Collaboration: Work with cross-functional teams to meet tight deadlines"
+          "Led ReactJS development for 3 MVPs using agile methodology and rapid iteration cycles",
+          "Accelerated delivery speed 30% through smart component reuse and efficient state management",
+          "All 3 launched on time and transitioned to production with customers",
+          "Integrated and configured AWS Cognito, Clerk, and Better Auth with OAuth flows, session management, and role-based access control",
+          "Built component libraries matching each client's design system with cross-browser compatibility and mobile-first approach"
         ]
       },
       "utn": {
-        "title": "Internship - Research & Development",
+        "title": "Information System Engineer",
         "company": "Universidad Tecnológica Nacional",
         "location": "Córdoba, Argentina",
-        "period": "Feb 2020 - Feb 2021",
-        "description": "Research and development of innovative solutions",
+        "period": "2017 - 2021",
+        "description": "Information System Engineering Degree",
         "achievements": [
-          "Fullstack Development: Development of innovative solutions using .NET Core and FastAPI",
-          "Technical Documentation: Preparation of detailed documentation to facilitate future development"
+          "Machine Learning and Big Data - UDEMY (105H)",
+          "Spanish: Native | English: Professional Advanced | Italian: Conversational"
         ]
       }
     }
@@ -154,12 +158,12 @@
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "location": "Location",
-    "locationValue": "Buenos Aires, Argentina",
+    "locationValue": "Córdoba, Argentina",
     "ctaTitle": "Ready to start your project?",
     "ctaSubtitle": "I'm available for new opportunities and collaborations",
     "sendMessage": "Send Message"
   },
   "footer": {
-    "copyright": "© 2025 Agustín Gelos. All rights reserved."
+    "copyright": "© 2025 Juan Agustín Gelos. All rights reserved."
   }
 }
