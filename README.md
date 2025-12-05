@@ -102,7 +102,7 @@ achievement-showcase-site/
 ## 👨‍💻 Autor
 
 **Agustín Gelos**
-- Email: agelos@itba.edu.ar
+- Email: juanagustingelos1@gmail.com
 - LinkedIn: [agustin-gelos](https://www.linkedin.com/in/agustin-gelos)
 - GitHub: [agustin-gelos](https://github.com/agustin-gelos)
 
