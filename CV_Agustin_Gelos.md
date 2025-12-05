@@ -67,9 +67,9 @@ Complete talent assessment system enabling companies to evaluate candidates thro
 
 ## Education
 
-### **Instituto Tecnológico de Buenos Aires (ITBA)**
-*Computer Engineering*
-*2017 - 2023 | Buenos Aires, Argentina*
+### **Universidad Tecnológica Nacional**
+*System Engineer*
+*2017 - 2021 | Cordoba, Argentina*
 
 ---
 
@@ -100,11 +100,4 @@ Complete talent assessment system enabling companies to evaluate candidates thro
 - Developed a collaborative task management tool with real-time updates
 - Used WebSockets for real-time communication between users
 - Implemented role-based access control and team collaboration features
-
----
-
-## Certifications
-
-- AWS Certified Developer - Associate
-- MongoDB Certified Developer
 
