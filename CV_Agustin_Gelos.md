@@ -2,7 +2,7 @@
 
 **Software Engineer**
 
-📧 agelos@itba.edu.ar | 📱 +54 9 11 6825-2171
+📧 juanagustingelos1@gmail.com | 📱 +54 9 11 6825-2171
 🔗 [LinkedIn](https://www.linkedin.com/in/agustin-gelos) | 💻 [GitHub](https://github.com/agustin-gelos)
 
 ---
