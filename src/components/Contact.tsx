@@ -22,8 +22,8 @@ const Contact = () => {
     {
       icon: Github,
       title: t("contact.github"),
-      value: "github.com/agelos",
-      href: "https://github.com"
+      value: "https://github.com/jAgusGelos",
+      href: "https://github.com/jAgusGelos"
     },
     {
       icon: MapPin,
