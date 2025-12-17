@@ -10,8 +10,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: t("contact.email"),
-      value: "contacto@ejemplo.com",
-      href: "mailto:contacto@ejemplo.com"
+      value: "juanagustingelos@egmail.com",
+      href: "mailto:juanagustingelos@egmail.com"
     },
     {
       icon: Linkedin,
