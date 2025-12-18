@@ -10,19 +10,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: t("contact.email"),
-      value: "juanagustingelos@egmail.com",
-      href: "mailto:juanagustingelos@egmail.com"
+      value: "juanagustingelos@gmail.com",
+      href: "mailto:juanagustingelos@gmail.com"
     },
     {
       icon: Linkedin,
       title: t("contact.linkedin"),
-      value: "linkedin.com/in/agustin-gelos",
-      href: "https://linkedin.com"
+      value: "linkedin.com/in/juan-agustin-gelos",
+      href: "https://www.linkedin.com/in/juan-agustin-gelos/"
     },
     {
       icon: Github,
       title: t("contact.github"),
-      value: "https://github.com/jAgusGelos",
+      value: "github.com/jAgusGelos",
       href: "https://github.com/jAgusGelos"
     },
     {
@@ -99,7 +99,7 @@ const Contact = () => {
                 className="bg-primary hover:bg-primary/90 glow-effect"
                 asChild
               >
-                <a href="mailto:contacto@ejemplo.com">
+                <a href="mailto:juanagustingelos@gmail.com">
                   {t("contact.sendMessage")}
                   <Mail className="ml-2 h-4 w-4" />
                 </a>
