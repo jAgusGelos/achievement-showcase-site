@@ -16,12 +16,14 @@ interface Project {
   githubUrl?: string;
 }
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const getProjects = (t: any): Project[] => [
   {
     title: t("projects.items.erp.title"),
     description: t("projects.items.erp.description"),
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
-    images: ["/erp-1.png", "/erp-2.png", "/erp-3.png"],
+    images: [`${BASE_URL}erp-1.png`, `${BASE_URL}erp-2.png`, `${BASE_URL}erp-3.png`],
     tags: ["React", "Node.js", "PostgreSQL", "Docker"],
     liveUrl: "#",
     githubUrl: "#"
@@ -30,7 +32,7 @@ const getProjects = (t: any): Project[] => [
     title: t("projects.items.ecommerce.title"),
     description: t("projects.items.ecommerce.description"),
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
-    images: ["/eccom-1.png", "/eccom-2.png", "/eccom-3.png"],
+    images: [`${BASE_URL}eccom-1.png`, `${BASE_URL}eccom-2.png`, `${BASE_URL}eccom-3.png`],
     tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
     liveUrl: "#",
     githubUrl: "#"
@@ -39,7 +41,7 @@ const getProjects = (t: any): Project[] => [
     title: t("projects.items.booking.title"),
     description: t("projects.items.booking.description"),
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop",
-    images: ["/beauty-1.png", "/beauty-2.png", "/beauty-3.png"],
+    images: [`${BASE_URL}beauty-1.png`, `${BASE_URL}beauty-2.png`, `${BASE_URL}beauty-3.png`],
     tags: ["React", "NestJs", "Stripe", "Firebase"],
     liveUrl: "#",
     githubUrl: "#"
